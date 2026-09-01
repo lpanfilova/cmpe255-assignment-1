@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A focused, persistent workspace for planning and completing tasks.">
+  <title>Daymark — Dynamic Todo Workspace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Daymark home">
+        <span class="brand-mark" aria-hidden="true">✓</span>
+        <span>Daymark</span>
+      </a>
+      <div class="header-actions">
+        <p id="todayLabel" class="today-label"></p>
+        <button id="themeToggle" class="icon-button" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="pageTitle">
+      <div>
+        <p class="eyebrow">YOUR DAILY WORKSPACE</p>
+        <h1 id="pageTitle">Make space for<br><em>what matters.</em></h1>
+        <p class="hero-copy">Capture the details, choose your focus, and move through the day with intention.</p>
+      </div>
+      <div class="progress-card" aria-label="Task progress">
+        <div class="progress-ring" id="progressRing">
+          <span id="progressValue">0%</span>
+        </div>
+        <div>
+          <strong id="progressTitle">Ready when you are</strong>
+          <span id="progressSubtitle">Add a task to begin</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="composer panel" aria-labelledby="composerTitle">
+      <div class="composer-heading">
+        <span class="plus" aria-hidden="true">+</span>
+        <div>
+          <h2 id="composerTitle">Add a new task</h2>
+          <p>What would make today feel successful?</p>
+        </div>
+      </div>
+      <form id="taskForm">
+        <label class="sr-only" for="taskTitle">Task title</label>
+        <input id="taskTitle" name="title" maxlength="120" autocomplete="off" placeholder="e.g. Prepare the project presentation" required>
+        <div class="form-row">
+          <label class="field">
+            <span>Due date</span>
+            <input id="taskDue" name="due" type="date">
+          </label>
+          <label class="field">
+            <span>Priority</span>
+            <select id="taskPriority" name="priority">
+              <option value="low">Low priority</option>
+              <option value="medium" selected>Medium priority</option>
+              <option value="high">High priority</option>
+            </select>
+          </label>
+          <label class="field tag-field">
+            <span>Tag</span>
+            <input id="taskTag" name="tag" maxlength="24" autocomplete="off" placeholder="Work, Personal…">
+          </label>
+          <button class="primary-button" type="submit">Add task <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="workspace" aria-labelledby="taskListTitle">
+      <div class="workspace-heading">
+        <div>
+          <p class="eyebrow">TODAY'S PLAN</p>
+          <h2 id="taskListTitle">Your tasks <span id="taskCount" class="count">0</span></h2>
+        </div>
+        <label class="search">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Search tasks</span>
+          <input id="searchInput" type="search" placeholder="Search tasks…">
+        </label>
+      </div>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter active" type="button" data-filter="all">All <span id="allCount">0</span></button>
+          <button class="filter" type="button" data-filter="active">Active <span id="activeCount">0</span></button>
+          <button class="filter" type="button" data-filter="completed">Completed <span id="completedCount">0</span></button>
+        </div>
+        <label class="sort-control">
+          <span>Sort</span>
+          <select id="sortSelect">
+            <option value="created">Recently added</option>
+            <option value="due">Due date</option>
+            <option value="priority">Priority</option>
+            <option value="alphabetical">A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="taskList" class="task-list" aria-live="polite"></div>
+
+      <div id="emptyState" class="empty-state" hidden>
+        <div class="empty-icon" aria-hidden="true">✓</div>
+        <h3 id="emptyTitle">Your slate is clear</h3>
+        <p id="emptyCopy">Add your first task above and start building momentum.</p>
+      </div>
+
+      <footer class="list-footer">
+        <span id="remainingLabel">0 tasks remaining</span>
+        <button id="clearCompleted" class="text-button" type="button">Clear completed</button>
+      </footer>
+    </section>
+  </main>
+
+  <dialog id="editDialog">
+    <form id="editForm" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">TASK DETAILS</p>
+          <h2>Edit task</h2>
+        </div>
+        <button id="closeDialog" class="icon-button" type="button" aria-label="Close">×</button>
+      </div>
+      <input id="editId" type="hidden">
+      <label class="field"><span>Task</span><input id="editTitle" maxlength="120" required></label>
+      <div class="dialog-grid">
+        <label class="field"><span>Due date</span><input id="editDue" type="date"></label>
+        <label class="field"><span>Priority</span><select id="editPriority"><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></label>
+      </div>
+      <label class="field"><span>Tag</span><input id="editTag" maxlength="24"></label>
+      <div class="dialog-actions">
+        <button id="cancelEdit" class="secondary-button" type="button">Cancel</button>
+        <button class="primary-button" type="submit">Save changes</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
