@@ -9,7 +9,7 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [02 - Nano LLM Transformer](02_nano_llm_transformer/) | Transformer and language-model fundamentals | Complete |
 | [03 - Customer Segmentation Clustering](03_customer_segmentation_clustering/) | Unsupervised customer segmentation | Complete |
 | [04 - Associative Pattern Mining](04_associative_pattern_mining/) | Association rules and frequent patterns | Complete |
-| 05 - Data Science Skills Lab | Applied data science skills | Not started |
+| [05 - Data Science Skills Lab](05_data_science_skills_lab/) | Applied data science skills | Complete |
 | 06 - Anomaly Detection | Outlier and anomaly detection | Not started |
 | 07 - AutoML AutoGluon | Automated machine learning with AutoGluon | Not started |
 | 08 - Data Science Visual Mastery | Data visualization | Not started |

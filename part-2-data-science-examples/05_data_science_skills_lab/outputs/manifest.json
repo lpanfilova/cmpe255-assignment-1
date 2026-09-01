@@ -1,0 +1,347 @@
+{
+  "generated_at": "2026-09-01T21:45:52.779639+00:00",
+  "dataset": {
+    "name": "Titanic: Machine Learning from Disaster",
+    "rows": 891,
+    "sha256": "4a437fde05fe5264e1701a7387ac6fb75393772ba38bb2c9c566405af5af4bd7"
+  },
+  "skills": [
+    {
+      "collection": "nimrodfisher",
+      "name": "ab-test-analysis",
+      "description": "Rigorous A/B test statistical analysis. Use when analyzing experiment results, calculating statistical significance, checking for sample ratio mismatch, or validating test design before launch.",
+      "path": "skills\\nimrodfisher\\ab-test-analysis\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "analysis-assumptions-log",
+      "description": "Track and document analytical assumptions and decisions. Use when making analytical choices, documenting trade-offs, ensuring transparency, or creating audit trails for analytical work.",
+      "path": "skills\\nimrodfisher\\analysis-assumptions-log\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "analysis-documentation",
+      "description": "Structured, reproducible analysis documentation. Use when documenting analysis findings, creating analysis notebooks, ensuring reproducibility, or building analysis archives for future reference.",
+      "path": "skills\\nimrodfisher\\analysis-documentation\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "analysis-planning",
+      "description": "Structure analysis approach before starting work. Use when receiving new analysis requests, breaking down complex questions into steps, or planning iterative analysis workflows.",
+      "path": "skills\\nimrodfisher\\analysis-planning\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "analysis-qa-checklist",
+      "description": "Pre-delivery quality assurance for analysis work. Use when reviewing analysis before sharing with stakeholders, checking for completeness, validating assumptions, or ensuring clarity of recommendations.",
+      "path": "skills\\nimrodfisher\\analysis-qa-checklist\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "analysis-retrospective",
+      "description": "Post-analysis learning and process improvement. Use when completing major analysis projects, documenting lessons learned, or improving team analytical practices.",
+      "path": "skills\\nimrodfisher\\analysis-retrospective\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "business-metrics-calculator",
+      "description": "Standard business metric calculation with industry benchmarks. Use when calculating SaaS metrics (MRR, churn, LTV, CAC), e-commerce KPIs, or product analytics metrics with proper definitions.",
+      "path": "skills\\nimrodfisher\\business-metrics-calculator\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "cohort-analysis",
+      "description": "Time-based cohort analysis with retention and behaviour tracking. Activate when you need to measure how groups of users/customers behave over time \u2014 retention rates, revenue by cohort, or feature adoption curves.",
+      "path": "skills\\nimrodfisher\\cohort-analysis\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "context-packager",
+      "description": "Efficiently package context for AI-assisted analysis. Use when preparing to work with Claude on analysis, organizing context documents, or structuring prompts for complex analytical tasks.",
+      "path": "skills\\nimrodfisher\\context-packager\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "dashboard-specification",
+      "description": "Design specifications for effective dashboards. Use when planning new dashboards, improving existing ones, or documenting dashboard requirements before development starts.",
+      "path": "skills\\nimrodfisher\\dashboard-specification\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "data-catalog-entry",
+      "description": "Create standardized metadata for data assets. Use when documenting new datasets, building data catalogs, improving data discoverability, or creating data dictionaries for teams.",
+      "path": "skills\\nimrodfisher\\data-catalog-entry\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "data-narrative-builder",
+      "description": "Build compelling data-driven narratives. Use when presenting analysis results, creating stakeholder reports, or transforming a set of findings into a story that drives a specific decision or action.",
+      "path": "skills\\nimrodfisher\\data-narrative-builder\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "data-quality-audit",
+      "description": "Comprehensive data quality assessment against business rules, schema constraints, and freshness expectations. Activate when validating data pipeline outputs before production use, auditing a dataset against defined business rules, or producing a quality scorecard for a data asset.",
+      "path": "skills\\nimrodfisher\\data-quality-audit\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "executive-summary-generator",
+      "description": "Create concise executive summaries from detailed analysis. Use when preparing board decks, executive briefings, or condensing complex analysis into decision-ready formats for senior audiences.",
+      "path": "skills\\nimrodfisher\\executive-summary-generator\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "funnel-analysis",
+      "description": "Conversion funnel analysis with drop-off investigation. Use when analyzing multi-step processes, identifying conversion bottlenecks, comparing segments through a funnel, or optimizing user journeys.",
+      "path": "skills\\nimrodfisher\\funnel-analysis\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "impact-quantification",
+      "description": "Estimate and communicate business impact of insights. Use when sizing opportunities discovered in analysis, calculating ROI of recommended actions, or prioritizing initiatives by potential impact.",
+      "path": "skills\\nimrodfisher\\impact-quantification\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "insight-synthesis",
+      "description": "Transform data findings into compelling insights. Use when converting analysis results into actionable insights, connecting findings to business impact, or preparing insights for stakeholder communication.",
+      "path": "skills\\nimrodfisher\\insight-synthesis\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "methodology-explainer",
+      "description": "Explain analysis methodology to diverse audiences. Use when documenting 'how we did this' sections, building trust through transparency, or teaching analytical approaches to stakeholders.",
+      "path": "skills\\nimrodfisher\\methodology-explainer\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "metric-reconciliation",
+      "description": "Cross-source metric validation and discrepancy investigation. Use when metrics from different sources don't match, investigating data quality issues between systems, or validating data migration accuracy.",
+      "path": "skills\\nimrodfisher\\metric-reconciliation\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "peer-review-template",
+      "description": "Structured peer review for analytical work. Use when reviewing teammates' analysis, providing constructive feedback, or establishing analysis quality standards.",
+      "path": "skills\\nimrodfisher\\peer-review-template\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "programmatic-eda",
+      "description": "Systematic exploratory data analysis. Activate when a dataset needs profiling \u2014 structure check, nulls, outliers, distributions, correlations \u2014 before deeper analysis begins.",
+      "path": "skills\\nimrodfisher\\programmatic-eda\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "query-validation",
+      "description": "SQL query review for correctness, performance, and best practices. Activate when a query needs review before production use, shows unexpected results, or runs too slowly.",
+      "path": "skills\\nimrodfisher\\query-validation\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "root-cause-investigation",
+      "description": "Systematic investigation of metric changes and anomalies. Use when a metric unexpectedly changes, investigating business metric drops, explaining performance variations, or drilling into aggregated metric drivers.",
+      "path": "skills\\nimrodfisher\\root-cause-investigation\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "schema-mapper",
+      "description": "Database schema understanding and relationship mapping. Use when exploring unfamiliar databases, documenting table relationships, identifying join paths, or generating ERD documentation for existing schemas.",
+      "path": "skills\\nimrodfisher\\schema-mapper\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "segmentation-analysis",
+      "description": "Customer/user segmentation with actionable insights. Use when identifying distinct customer groups, analyzing segment-specific behavior, profiling high-value segments, or testing segmentation hypotheses.",
+      "path": "skills\\nimrodfisher\\segmentation-analysis\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "semantic-model-builder",
+      "description": "Build structured semantic layer documentation for metrics, dimensions, and entities. Activate when you need to define a business metric, document a data model, or create YAML definitions compatible with dbt Semantic Layer or similar frameworks.",
+      "path": "skills\\nimrodfisher\\semantic-model-builder\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "sql-to-business-logic",
+      "description": "Translate SQL queries into plain language business logic. Use when documenting queries, explaining analysis to non-technical stakeholders, code reviewing for correctness, or building a query catalog.",
+      "path": "skills\\nimrodfisher\\sql-to-business-logic\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "stakeholder-requirements-gathering",
+      "description": "Structured requirements elicitation for analysis requests. Use when scoping new analysis projects, clarifying ambiguous business questions, or documenting analysis acceptance criteria with stakeholders.",
+      "path": "skills\\nimrodfisher\\stakeholder-requirements-gathering\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "technical-to-business-translator",
+      "description": "Translate technical analysis into business language. Use when explaining statistical concepts to non-analysts, simplifying technical findings, or bridging communication between data teams and business stakeholders.",
+      "path": "skills\\nimrodfisher\\technical-to-business-translator\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "time-series-analysis",
+      "description": "Temporal pattern detection and forecasting. Use when analyzing trends over time, detecting seasonality, identifying anomalies in time series, or building simple forecasting models for planning.",
+      "path": "skills\\nimrodfisher\\time-series-analysis\\SKILL.md"
+    },
+    {
+      "collection": "nimrodfisher",
+      "name": "visualization-builder",
+      "description": "Create effective, publication-ready data visualizations. Use when choosing chart types, designing presentation visuals, building dashboard charts, or applying visual design best practices to data output.",
+      "path": "skills\\nimrodfisher\\visualization-builder\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "data-cleaning",
+      "description": "Use when preparing raw data for modeling \u2014 handling missing values, duplicates, inconsistent types, outliers, and bad categorical values. Emphasizes fitting all imputation on train-only to avoid leakage.",
+      "path": "skills\\param087\\data-cleaning\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "experiment-tracking",
+      "description": "Use when running ML experiments that need to be compared, reproduced, or shared. Covers MLflow/Weights & Biases logging, what to track, run organization, and model registry basics.",
+      "path": "skills\\param087\\experiment-tracking\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "exploratory-data-analysis",
+      "description": "Use when starting on a new dataset, before modeling, or when asked to \"explore\", \"profile\", \"understand\", or \"summarize\" data. Covers structured EDA, distributions, correlations, target leakage checks, and visualization.",
+      "path": "skills\\param087\\exploratory-data-analysis\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "feature-engineering",
+      "description": "Use when creating, encoding, scaling, or selecting features for ML models. Covers categorical encoding, numeric transforms, datetime/text/aggregation features, and leakage-safe target encoding.",
+      "path": "skills\\param087\\feature-engineering\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "hyperparameter-tuning",
+      "description": "Use when optimizing model hyperparameters. Covers search strategy (random vs Bayesian/Optuna), leakage-safe tuning inside CV, search-space design, early stopping, and budget management.",
+      "path": "skills\\param087\\hyperparameter-tuning\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "imbalanced-data",
+      "description": "Use when the target is rare (fraud, churn, disease, anomalies). Covers correct metrics, resampling (SMOTE/undersampling), class weights, threshold tuning, and avoiding the accuracy trap and resampling leakage.",
+      "path": "skills\\param087\\imbalanced-data\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "llm-finetuning",
+      "description": "Use when fine-tuning a large language model. Covers choosing full vs LoRA/QLoRA, dataset formatting, the transformers/PEFT/TRL stack, key hyperparameters, and evaluating fine-tunes without overfitting.",
+      "path": "skills\\param087\\llm-finetuning\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "ml-debugging",
+      "description": "Use when a model won't learn, loss is NaN, metrics look too good/bad, or training is unstable. Provides a systematic decision tree for diagnosing data, optimization, and generalization failures.",
+      "path": "skills\\param087\\ml-debugging\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "model-evaluation",
+      "description": "Use when choosing metrics, validating models, or interpreting results. Covers metric selection by problem type, cross-validation strategy, calibration, confusion-matrix analysis, and avoiding misleading scores.",
+      "path": "skills\\param087\\model-evaluation\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "model-serving",
+      "description": "Use when deploying a trained model behind an API. Covers FastAPI inference services, loading artifacts safely, request validation, batching, ONNX/quantization for speed, health checks, and monitoring.",
+      "path": "skills\\param087\\model-serving\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "pandas-patterns",
+      "description": "Use when writing or reviewing pandas code. Covers idiomatic, vectorized, memory-efficient patterns; avoiding SettingWithCopyWarning, chained indexing, and slow apply loops.",
+      "path": "skills\\param087\\pandas-patterns\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "pytorch-training-loop",
+      "description": "Use when writing or reviewing a PyTorch training loop. Covers correct train/eval modes, gradient handling, mixed precision, checkpointing, reproducibility, and device management.",
+      "path": "skills\\param087\\pytorch-training-loop\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "rag-pipeline",
+      "description": "Use when building retrieval-augmented generation. Covers chunking strategy, embedding choice, vector stores, hybrid + reranking retrieval, prompt assembly, and evaluating retrieval and answer quality.",
+      "path": "skills\\param087\\rag-pipeline\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "reproducible-ml",
+      "description": "Use when an ML result must be reproducible \u2014 fixing seeds, pinning environments, versioning data, and structuring projects so runs can be exactly recreated. Covers determinism gotchas across NumPy, PyTorch, and CUDA.",
+      "path": "skills\\param087\\reproducible-ml\\SKILL.md"
+    },
+    {
+      "collection": "param087",
+      "name": "sklearn-pipelines",
+      "description": "Use when building scikit-learn models that must not leak preprocessing. Covers Pipeline, ColumnTransformer, custom transformers, and combining preprocessing with cross-validation correctly.",
+      "path": "skills\\param087\\sklearn-pipelines\\SKILL.md"
+    }
+  ],
+  "skill_count": 46,
+  "facts": {
+    "rows": 891,
+    "columns": 12,
+    "duplicate_passenger_ids": 0,
+    "missing_cells": 866,
+    "missing_age_pct": 19.87,
+    "survival_rate": 0.3838,
+    "median_fare": 14.45,
+    "median_family_size": 1.0,
+    "by_class": {
+      "1": {
+        "passengers": 216,
+        "survival_rate": 0.6296
+      },
+      "2": {
+        "passengers": 184,
+        "survival_rate": 0.4728
+      },
+      "3": {
+        "passengers": 491,
+        "survival_rate": 0.2424
+      }
+    },
+    "by_sex": {
+      "female": {
+        "passengers": 314,
+        "survival_rate": 0.742
+      },
+      "male": {
+        "passengers": 577,
+        "survival_rate": 0.1889
+      }
+    }
+  },
+  "model_metrics": {
+    "accuracy": 0.7758,
+    "balanced_accuracy": 0.7569,
+    "f1": 0.6988,
+    "roc_auc": 0.84,
+    "best_cv_roc_auc": 0.8517,
+    "best_parameters": {
+      "model__C": 0.25,
+      "model__class_weight": null
+    },
+    "train_rows": 668,
+    "test_rows": 223
+  },
+  "retrieval": {
+    "query": "female passenger survived",
+    "top_documents": [
+      "Passenger 2 was a female passenger in class 1 who survived.",
+      "Passenger 3 was a female passenger in class 3 who survived.",
+      "Passenger 4 was a female passenger in class 1 who survived."
+    ],
+    "corpus_size": 80
+  },
+  "environment": {
+    "python": "3.11.16",
+    "seed": 42
+  }
+}

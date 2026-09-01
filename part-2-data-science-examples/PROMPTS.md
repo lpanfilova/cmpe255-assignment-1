@@ -55,7 +55,14 @@ Build an associative pattern-mining project using a popular Kaggle dataset. Foll
 
 Keep the project reasonably scoped and runnable locally, using a manageable dataset or sample if needed. Add a concise README with setup/run instructions and key results. Test the association/pattern-mining pipeline and dashboard. Update the Part 2 README to mark Project 04 complete and link its directory while preserving existing entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
 
-## Projects 05-13
+## Project 05: Data Science Skills Lab
+
+### Prompt
+
+Work in `part-2-data-science-examples/05_data_science_skills_lab`.
+Install param087 GitHub `agent-ml-skills` and nimrodfisher `data-analytics-skills`, and demonstrate every skill on an appropriate popular Kaggle dataset. Include the CRISP-DM steps. Keep the implementation reasonably scoped and runnable locally, avoiding unnecessary expansion beyond demonstrating the requested skills. Add a concise README with setup/run instructions, test the application and skill demonstrations, update the Part 2 README to mark Project 05 complete and link its directory while preserving existing project entries, and record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
+
+## Projects 06-13
 
 Add one section per project using this pattern:
 
