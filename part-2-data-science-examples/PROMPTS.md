@@ -82,7 +82,34 @@ Illustrate AutoML with AutoGluon on various data science tasks. Follow the CRISP
 
 Keep the project reasonably scoped and runnable locally. Use manageable datasets/samples and short AutoGluon training time limits so it does not require excessive compute. Add a concise README with setup/run instructions and key results. Test the AutoGluon training/inference workflow and dashboard. Update the Part 2 README to mark Project 07 complete and link its directory while preserving existing project entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
 
-## Projects 08-13
+## Project 08: Data Science Visual Mastery
+
+### Prompt
+
+Work in `part-2-data-science-examples/08_datascience_visual_mastery`.
+
+Lets do another project - teach beginner data science students in an excellent way with deep intuition and rigorous math and visual intuition and live simulation on:
+
+1. naive bayes
+2. evaluation of model - confusion matrix, type 1 and type 2 errors, roc-auc, cost matrix, tradeoff between precision and recall
+3. differential calculus, derivatives and how they connect to gradient descent
+4. chain rule and how it connects to backpropagation
+
+Include quizzes for each concept and interview prep questions. Also create a github.io ready page for this project.
+
+Keep the implementation reasonably scoped and runnable locally. Make the visualizations and simulations interactive where practical.
+
+Add a concise README with setup/run instructions.
+
+Update `part-2-data-science-examples/README.md` to mark Project 08 complete and link to its directory. Preserve existing project entries.
+
+Record this Project 08 prompt in `part-2-data-science-examples/PROMPTS.md`.
+
+Do not modify Part 1. Do not commit or push.
+
+When finished, briefly summarize what was implemented, how it was tested, and how to run it.
+
+## Projects 09-13
 
 Add one section per project using this pattern:
 

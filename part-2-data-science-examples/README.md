@@ -12,7 +12,7 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [05 - Data Science Skills Lab](05_data_science_skills_lab/) | Applied data science skills | Complete |
 | [06 - Anomaly Detection](06_anomaly_detection/) | Outlier and anomaly detection | Complete |
 | [07 - AutoML AutoGluon](07_automl_autogluon/) | Automated machine learning with AutoGluon | Complete |
-| 08 - Data Science Visual Mastery | Data visualization | Not started |
+| [08 - Data Science Visual Mastery](08_datascience_visual_mastery/) | Interactive foundations: Bayes, evaluation, calculus, and backpropagation | Complete |
 | 09 - FlowForge DAG Engine | Workflow orchestration with DAGs | Not started |
 | 10 - CRISP-DM Masters Curriculum | CRISP-DM methodology | Not started |
 | 11 - Enterprise DS Audit | Enterprise data science auditing | Not started |

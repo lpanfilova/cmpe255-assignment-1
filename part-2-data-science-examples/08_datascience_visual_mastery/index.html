@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive, visual course on Naive Bayes, model evaluation, gradient descent, and backpropagation.">
+  <title>Signal Lab — Data Science Visual Mastery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to lesson</a>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Signal Lab home"><span class="brand-mark">∂</span> SIGNAL LAB</a>
+    <nav aria-label="Course modules">
+      <a href="#bayes">Bayes</a><a href="#evaluation">Evaluation</a><a href="#calculus">Calculus</a><a href="#backprop">Backprop</a>
+    </nav>
+    <div class="progress-wrap" title="Lesson sections visited"><span id="progressLabel">0 / 4 explored</span><div class="progress"><i id="progressBar"></i></div></div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Interactive course · Beginner friendly · Math honest</p>
+        <h1>See the machinery<br><em>behind the model.</em></h1>
+        <p class="lede">Four visual labs connect probability, evaluation, calculus, and neural networks. Move a control, make a prediction, then inspect the equation that changed.</p>
+        <div class="hero-actions"><a class="button primary" href="#bayes">Start with Bayes <span>→</span></a><button class="button ghost" id="resetProgress">Reset progress</button></div>
+        <div class="course-stats"><span><b>04</b> visual labs</span><span><b>12</b> quiz checks</span><span><b>0</b> dependencies</span></div>
+      </div>
+      <div class="hero-viz" aria-label="Animated model learning illustration">
+        <canvas id="heroCanvas" width="620" height="470"></canvas>
+        <div class="viz-caption"><span class="live-dot"></span> LIVE MODEL SPACE <b id="heroLoss">loss 0.42</b></div>
+      </div>
+    </section>
+
+    <section class="course-map" aria-labelledby="map-title">
+      <p class="eyebrow">The mental model</p><h2 id="map-title">One story, four lenses</h2>
+      <div class="map-grid">
+        <a href="#bayes"><b>01</b><span>Belief</span><small>Update what is plausible</small></a>
+        <a href="#evaluation"><b>02</b><span>Decision</span><small>Choose what counts as positive</small></a>
+        <a href="#calculus"><b>03</b><span>Direction</span><small>Measure how loss changes</small></a>
+        <a href="#backprop"><b>04</b><span>Credit</span><small>Assign blame through a network</small></a>
+      </div>
+    </section>
+
+    <section class="module" id="bayes" data-module="bayes">
+      <div class="module-head"><div><p class="eyebrow">01 · Probability as evidence</p><h2>Naive Bayes</h2></div><p class="module-intro">A prior belief meets evidence. “Naive” means features vote independently once the class is known—not that the method is foolish.</p></div>
+      <div class="concept-grid">
+        <article class="theory card">
+          <span class="tag">CORE IDEA</span><h3>Turn the question around</h3>
+          <p>We want <i>P(class | evidence)</i>, but usually know how common the class is and how likely the evidence is within it.</p>
+          <div class="formula"><span>P(C | x₁…xₙ) ∝</span><strong>P(C)</strong><span>×</span><strong>∏ P(xᵢ | C)</strong></div>
+          <p class="callout"><b>Intuition:</b> prior × evidence votes. Normalize the scores across classes only at the end.</p>
+          <details><summary>Why the independence assumption?</summary><p>It replaces a huge joint probability table with one small likelihood per feature and class. Correlated evidence can be double-counted, but the ranking can still be remarkably useful.</p></details>
+          <details><summary>Zero counts and Laplace smoothing</summary><p>An unseen feature would multiply the score by zero. Add-α smoothing uses <code>(count + α) / (class count + α × vocabulary size)</code> so absence of history is not impossibility.</p></details>
+        </article>
+        <article class="lab card">
+          <div class="lab-title"><div><span class="tag coral">LIVE LAB</span><h3>Spam evidence mixer</h3></div><button class="mini-button" id="bayesReset">Reset</button></div>
+          <label>Prior probability of spam <output id="priorOut">40%</output><input id="prior" type="range" min="5" max="95" value="40"></label>
+          <p class="control-label">Evidence in the message</p>
+          <div class="switches">
+            <label><input class="bayes-feature" type="checkbox" data-spam="0.72" data-ham="0.08" checked><span>“free”</span></label>
+            <label><input class="bayes-feature" type="checkbox" data-spam="0.62" data-ham="0.12"><span>“winner”</span></label>
+            <label><input class="bayes-feature" type="checkbox" data-spam="0.54" data-ham="0.18" checked><span>has a link</span></label>
+          </div>
+          <div class="prob-result"><div class="donut" id="bayesDonut"><strong id="posterior">88%</strong><span>spam</span></div><div><p id="bayesVerdict">Likely spam</p><small id="bayesMath"></small></div></div>
+          <div class="odds-track"><span id="hamBar"></span><i id="spamBar"></i></div><div class="legend"><span>ham posterior</span><span>spam posterior</span></div>
+        </article>
+      </div>
+      <div class="quiz card" data-quiz="bayes"><div><span class="tag">KNOWLEDGE CHECK</span><h3>Why use log probabilities in Naive Bayes?</h3></div><div class="answers"><button data-correct="false">They make features independent</button><button data-correct="true">They turn tiny products into stable sums</button><button data-correct="false">They remove the need for priors</button></div><p class="feedback" aria-live="polite"></p></div>
+    </section>
+
+    <section class="module dark" id="evaluation" data-module="evaluation">
+      <div class="module-head"><div><p class="eyebrow">02 · Scores become decisions</p><h2>Model evaluation</h2></div><p class="module-intro">A probability is not yet a decision. The threshold encodes whose mistakes matter, and every metric highlights a different consequence.</p></div>
+      <div class="evaluation-layout">
+        <article class="lab card dark-card">
+          <div class="lab-title"><div><span class="tag lime">THRESHOLD LAB</span><h3>Move the decision line</h3></div><output id="thresholdOut">0.50</output></div>
+          <label class="sr-only" for="threshold">Classification threshold</label><input id="threshold" type="range" min="5" max="95" value="50">
+          <canvas id="scoreCanvas" width="760" height="255" aria-label="Positive and negative prediction scores around a movable threshold"></canvas>
+          <div class="metric-row"><div><small>PRECISION</small><b id="precision">—</b><span>TP / predicted +</span></div><div><small>RECALL / TPR</small><b id="recall">—</b><span>TP / actual +</span></div><div><small>FPR</small><b id="fpr">—</b><span>FP / actual −</span></div><div><small>ACCURACY</small><b id="accuracy">—</b><span>correct / all</span></div></div>
+        </article>
+        <article class="matrix-card card dark-card">
+          <span class="tag lime">CONFUSION MATRIX</span><h3>Count the outcomes</h3>
+          <div class="axis-label top">PREDICTED</div>
+          <div class="matrix"><div class="corner"></div><div class="axis">POSITIVE</div><div class="axis">NEGATIVE</div><div class="axis side">ACTUAL +</div><div class="cell good"><small>TRUE POSITIVE</small><b id="tp">0</b><span>caught</span></div><div class="cell bad"><small>FALSE NEGATIVE</small><b id="fn">0</b><span>Type II</span></div><div class="axis side">ACTUAL −</div><div class="cell bad"><small>FALSE POSITIVE</small><b id="fp">0</b><span>Type I</span></div><div class="cell good"><small>TRUE NEGATIVE</small><b id="tn">0</b><span>cleared</span></div></div>
+        </article>
+      </div>
+      <div class="evaluation-layout second">
+        <article class="card dark-card"><span class="tag lime">ROC + AUC</span><h3>All thresholds at once</h3><canvas id="rocCanvas" width="500" height="310" aria-label="Receiver operating characteristic curve"></canvas><p class="callout dark-callout"><b>AUC = <span id="auc">—</span>.</b> It is the probability a random positive receives a higher score than a random negative. The diagonal is random ranking (0.50).</p></article>
+        <article class="card dark-card"><span class="tag lime">COST MATRIX</span><h3>Make consequences explicit</h3><div class="cost-controls"><label>False positive cost <input id="fpCost" type="number" min="0" max="1000" value="1"></label><label>False negative cost <input id="fnCost" type="number" min="0" max="1000" value="8"></label></div><div class="cost-total"><small>CURRENT ERROR COST</small><strong id="totalCost">0</strong><span id="bestThreshold"></span></div><p>If missing disease costs more than a false alarm, lower the threshold to recover more positives. Precision usually falls while recall rises.</p></article>
+      </div>
+      <div class="quiz card dark-card" data-quiz="evaluation"><div><span class="tag lime">KNOWLEDGE CHECK</span><h3>Which error is a sick patient incorrectly cleared?</h3></div><div class="answers"><button data-correct="false">False positive / Type I</button><button data-correct="true">False negative / Type II</button><button data-correct="false">True negative</button></div><p class="feedback" aria-live="polite"></p></div>
+    </section>
+
+    <section class="module" id="calculus" data-module="calculus">
+      <div class="module-head"><div><p class="eyebrow">03 · Change has a direction</p><h2>Derivatives → gradient descent</h2></div><p class="module-intro">A derivative is a local sensitivity: how much output changes after a tiny input nudge. A gradient collects one sensitivity per parameter.</p></div>
+      <div class="concept-grid">
+        <article class="theory card"><span class="tag">FROM SECANT TO TANGENT</span><h3>Zoom into change</h3><div class="formula stacked"><span>average slope = [f(x+h)−f(x)] / h</span><strong>f′(x) = lim<sub>h→0</sub> [f(x+h)−f(x)] / h</strong></div><p>As <i>h</i> shrinks, the secant line through two points becomes the tangent line at one point. Its slope predicts nearby change: <i>f(x+Δx) ≈ f(x)+f′(x)Δx</i>.</p><div class="analogy"><b>Contour-map intuition</b><span>The gradient points steepest uphill. To minimize loss, walk the opposite way.</span></div><div class="formula"><strong>θ ← θ − η∇L(θ)</strong></div><p class="muted">η is the learning rate: step size, not direction.</p></article>
+        <article class="lab card"><div class="lab-title"><div><span class="tag coral">LIVE LAB</span><h3>Descend the loss bowl</h3></div><button class="mini-button" id="descentReset">Reset</button></div><canvas id="descentCanvas" width="650" height="350" aria-label="Gradient descent on a convex loss curve"></canvas><div class="descent-controls"><label>Learning rate η <output id="lrOut">0.10</output><input id="learningRate" type="range" min="1" max="110" value="10"></label><button class="button primary small" id="descentStep">Take one step →</button><button class="button ghost small" id="descentAuto">Auto-run</button></div><div class="step-equation" id="stepEquation"></div></article>
+      </div>
+      <div class="quiz card" data-quiz="calculus"><div><span class="tag">KNOWLEDGE CHECK</span><h3>If f′(x) is positive, which direction locally decreases f?</h3></div><div class="answers"><button data-correct="true">Decrease x</button><button data-correct="false">Increase x</button><button data-correct="false">The derivative cannot tell us</button></div><p class="feedback" aria-live="polite"></p></div>
+    </section>
+
+    <section class="module warm" id="backprop" data-module="backprop">
+      <div class="module-head"><div><p class="eyebrow">04 · Local effects compose</p><h2>Chain rule → backpropagation</h2></div><p class="module-intro">A neuron is a chain of small functions. Backprop walks that chain backward, multiplying local derivatives to assign each parameter its share of the error.</p></div>
+      <div class="concept-grid backprop-grid">
+        <article class="theory card"><span class="tag coral">CHAIN RULE</span><h3>Follow every path</h3><p>Suppose <i>x → z → ŷ → L</i>. A change in <i>x</i> affects loss through every link:</p><div class="formula stacked"><strong>∂L/∂x = ∂L/∂ŷ · ∂ŷ/∂z · ∂z/∂x</strong><span>upstream gradient × local derivative</span></div><ol class="steps"><li><b>Forward:</b> cache each intermediate value.</li><li><b>Backward:</b> start with ∂L/∂L = 1.</li><li><b>Multiply:</b> pass gradients through each local operation.</li><li><b>Update:</b> nudge each weight opposite its gradient.</li></ol><p class="callout coral-callout"><b>Deep intuition:</b> backprop is dynamic programming for derivatives—reuse partial results instead of expanding one enormous symbolic expression.</p></article>
+        <article class="lab card network-lab"><div class="lab-title"><div><span class="tag coral">NEURON LAB</span><h3>Trace one training example</h3></div><button class="mini-button" id="networkReset">Reset</button></div><div class="network" aria-label="A one-neuron computation graph"><div class="node input"><small>INPUT</small><b>x = 2</b></div><span>× w</span><div class="node"><small>PRE-ACT.</small><b id="zValue">z</b></div><span>σ</span><div class="node"><small>PREDICTION</small><b id="yhatValue">ŷ</b></div><span>→</span><div class="node loss"><small>LOSS</small><b id="lossValue">L</b></div></div><label>Weight w <output id="weightOut">−0.50</output><input id="weight" type="range" min="-200" max="200" value="-50"></label><div class="gradient-flow"><div><small>① LOSS SIGNAL</small><b id="gradLoss">∂L/∂ŷ</b></div><i>×</i><div><small>② SIGMOID</small><b id="gradSigmoid">∂ŷ/∂z</b></div><i>×</i><div><small>③ LINEAR</small><b id="gradLinear">∂z/∂w</b></div><i>=</i><div class="gradient-result"><small>WEIGHT GRADIENT</small><b id="gradWeight">∂L/∂w</b></div></div><button class="button primary" id="applyGradient">Apply update (η = 0.5) →</button><p id="networkNarrative" class="muted"></p></article>
+      </div>
+      <div class="quiz card" data-quiz="backprop"><div><span class="tag coral">KNOWLEDGE CHECK</span><h3>Why multiply derivatives in the chain rule?</h3></div><div class="answers"><button data-correct="false">To make the learning rate smaller</button><button data-correct="false">Because all neurons are independent</button><button data-correct="true">Each link scales how much change reaches the next</button></div><p class="feedback" aria-live="polite"></p></div>
+    </section>
+
+    <section class="interview" id="interview">
+      <div class="module-head"><div><p class="eyebrow">Interview field guide</p><h2>Explain it without hiding behind notation.</h2></div><p class="module-intro">Try each question aloud before revealing the answer. Strong answers give the intuition, equation, assumption, and one practical consequence.</p></div>
+      <div class="interview-grid">
+        <details><summary><span>01</span>When can Naive Bayes work despite correlated features?</summary><p>Classification needs the correct score ordering, not perfectly calibrated probabilities. Correlation can distort posterior confidence yet leave the decision boundary useful. Mention double-counting evidence and checking calibration.</p></details>
+        <details><summary><span>02</span>Accuracy is 99%. Why might the model be useless?</summary><p>With 1% positives, predicting negative always gets 99% accuracy and zero recall. Ask for the confusion matrix, base rate, precision-recall curve, and error costs.</p></details>
+        <details><summary><span>03</span>ROC-AUC or PR-AUC for rare positives?</summary><p>Usually PR-AUC: it focuses on positive-class retrieval and exposes false-positive burden. ROC-AUC can look strong because the large negative class makes a low FPR easy. State prevalence and the decision objective.</p></details>
+        <details><summary><span>04</span>What does a derivative mean beyond “slope”?</summary><p>It is local sensitivity: units of output change per unit of input change. In optimization it predicts the first-order effect of nudging a parameter.</p></details>
+        <details><summary><span>05</span>What happens if the learning rate is too large?</summary><p>Steps can overshoot the minimum, oscillate, or diverge. Too small converges slowly or stalls on flat regions. Schedules and adaptive optimizers modify effective step sizes.</p></details>
+        <details><summary><span>06</span>What causes vanishing gradients?</summary><p>Backprop multiplies many local derivatives. If most magnitudes are below one, the product shrinks exponentially, so early layers learn slowly. ReLU-family activations, residual paths, normalization, and careful initialization help.</p></details>
+        <details><summary><span>07</span>Is a 0.5 classification threshold special?</summary><p>Only under particular assumptions about calibrated probabilities and symmetric costs. Choose a threshold on validation data using operating constraints or expected cost, then test it on untouched data.</p></details>
+        <details><summary><span>08</span>How would you gradient-check backprop?</summary><p>Compare the analytic gradient to a centered finite difference: [L(w+ε)−L(w−ε)]/(2ε). Use a small ε and relative error, while accounting for numerical precision and nondifferentiable points.</p></details>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">∂</span> SIGNAL LAB</a><p>Built to make the invisible visible.</p><a href="#top">Back to top ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
