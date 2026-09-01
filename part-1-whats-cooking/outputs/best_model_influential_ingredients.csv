@@ -1,201 +1,201 @@
-cuisine,rank,ingredient,model_weight
-brazilian,1,cachaca,7.011260781617501
-brazilian,2,manioc flour,5.167606815539722
-brazilian,3,tapioca flour,4.3588967905185525
-brazilian,4,hearts of palm,4.054381552082128
-brazilian,5,stone-ground cornmeal,3.9812002165185363
-brazilian,6,dried black beans,3.7656140826658366
-brazilian,7,tapioca starch,3.6450082054287614
-brazilian,8,sweetened condensed milk,3.6031924444530663
-brazilian,9,starch,3.3245847796058836
-brazilian,10,chocolate sprinkles,3.190760779823044
-british,1,stilton,4.2815690165079365
-british,2,stilton cheese,4.222189058859121
-british,3,beef drippings,3.4895829636607103
-british,4,mincemeat,3.2350220973255532
-british,5,marmite,3.2076542648737214
-british,6,haddock fillets,3.148017817073371
-british,7,malt vinegar,3.010681335480319
-british,8,smoked & dried fish,2.8115321047434607
-british,9,scotch,2.775398282424238
-british,10,chocolate covered english toffee,2.642245606716046
-cajun_creole,1,cajun seasoning,4.438977370475865
-cajun_creole,2,creole seasoning,3.92045884083894
-cajun_creole,3,creole mustard,2.362539352503777
-cajun_creole,4,andouille sausage,2.1747176360299374
-cajun_creole,5,red beans,2.0740802021381826
-cajun_creole,6,cajun spice mix,2.003618735105533
-cajun_creole,7,active dry yeast,1.963476236929024
-cajun_creole,8,french bread,1.9399020744465505
-cajun_creole,9,creole style seasoning,1.9024407297098267
-cajun_creole,10,catfish,1.8679791350166068
-chinese,1,mandarin oranges,3.4671662872253117
-chinese,2,chinese five-spice powder,3.3843277558975258
-chinese,3,szechwan peppercorns,3.287188259109752
-chinese,4,egg roll wrappers,2.5249970001488378
-chinese,5,glutinous rice flour,2.433762600034111
-chinese,6,chow mein noodles,2.1727458191760283
-chinese,7,lo mein noodles,2.0841402070971697
-chinese,8,hoisin sauce,1.9993771561644507
-chinese,9,chinese rice wine,1.966844628915822
-chinese,10,yardlong beans,1.9498123550840745
-filipino,1,calamansi juice,4.14577311934838
-filipino,2,lumpia skins,3.2149825142561412
-filipino,3,lumpia wrappers,3.159085524084873
-filipino,4,glutinous rice flour,2.6144798462522547
-filipino,5,edam,2.5800478689627178
-filipino,6,condensed milk,2.5748280955792144
-filipino,7,hot dogs,2.374026212839514
-filipino,8,fruit cocktail,2.3717297973270797
-filipino,9,bone-in pork chops,2.362170881185964
-filipino,10,green peppercorns,2.3532077847197415
-french,1,gruyere cheese,2.766706071651375
-french,2,grated gruyère cheese,2.696630747906125
-french,3,swiss cheese,2.6899264677352885
-french,4,haricots verts,2.5607730120591037
-french,5,crepes,2.5187709140828836
-french,6,niçoise olives,2.4106410181835263
-french,7,herbes de provence,2.3981441782986397
-french,8,shredded swiss cheese,2.1799429216355772
-french,9,brie cheese,2.094198821428853
-french,10,calvados,2.09182221494471
-greek,1,feta cheese,4.261901709230586
-greek,2,feta cheese crumbles,4.179990461714886
-greek,3,greek seasoning,4.1555465411523285
-greek,4,greek style plain yogurt,3.9469054123085114
-greek,5,greek yogurt,3.9302137331903593
-greek,6,phyllo dough,3.637116580633783
-greek,7,ouzo,3.547113834101495
-greek,8,phyllo,3.1421995276308676
-greek,9,tahini,3.104314454325569
-greek,10,low-fat greek yogurt,2.7983780494629817
-indian,1,curry powder,3.1493014998641375
-indian,2,masala,2.8946721453281765
-indian,3,plain yogurt,2.875226750496504
-indian,4,garam masala,2.60470085875187
-indian,5,ground cardamom,2.5825185572705363
-indian,6,curds,2.568064054608475
-indian,7,yoghurt,2.4827328888685756
-indian,8,madras curry powder,2.4650326907595654
-indian,9,cardamom pods,2.408802657135785
-indian,10,tandoori spices,2.317068027205847
-irish,1,irish whiskey,5.4046613239260495
-irish,2,irish cream liqueur,4.298905651464174
-irish,3,guinness beer,3.970870562676895
-irish,4,baileys irish cream liqueur,3.90488595949443
-irish,5,irish bacon,3.854352079589479
-irish,6,stout,3.7308016496548753
-irish,7,corned beef,3.689682011125211
-irish,8,soda bread,3.5913511480717584
-irish,9,color food green,3.0954146941365566
-irish,10,beef brisket,2.7013902875160225
-italian,1,polenta,2.706417609003281
-italian,2,arborio rice,2.6995850713834857
-italian,3,pesto,2.5855490427210923
-italian,4,marsala wine,2.5735727640779578
-italian,5,mascarpone,2.5564242148524032
-italian,6,ricotta cheese,2.506018666280225
-italian,7,italian sausage,2.4831657077944023
-italian,8,marinara sauce,2.1611857919199684
-italian,9,spaghetti,2.1439072485996356
-italian,10,italian seasoning,2.1264519522836034
-jamaican,1,jamaican jerk season,5.68457148044714
-jamaican,2,jerk seasoning,5.087281010067024
-jamaican,3,jamaican jerk spice,4.410490937615525
-jamaican,4,jerk sauce,4.089791458380325
-jamaican,5,breadfruit,3.545339232128844
-jamaican,6,allspice,3.3793755931571563
-jamaican,7,ground allspice,3.195887878426363
-jamaican,8,jerk marinade,3.1681181834565293
-jamaican,9,caribbean jerk seasoning,3.140790937592516
-jamaican,10,white rum,2.8361995901860935
-japanese,1,miso paste,3.9749502155031227
-japanese,2,matcha green tea powder,3.519268662536375
-japanese,3,dashi,3.3928509129349704
-japanese,4,mirin,3.3349920759813156
-japanese,5,sake,3.282895379970883
-japanese,6,soba noodles,3.282373396134365
-japanese,7,wasabi powder,3.1232041675036575
-japanese,8,udon,3.108440414609094
-japanese,9,miso,3.0929759058909694
-japanese,10,bonito flakes,3.0305295876703524
-korean,1,kimchi,5.449987133140516
-korean,2,gochujang base,4.643254375152891
-korean,3,korean chile flakes,3.683935676249488
-korean,4,rice cakes,2.888104859378073
-korean,5,pears,2.7736979016733736
-korean,6,beef rib short,2.5631616451840773
-korean,7,short rib,2.5528054237398776
-korean,8,korean chile paste,2.517730967881228
-korean,9,pinenuts,2.4640536797088175
-korean,10,watercress leaves,2.381148089730433
-mexican,1,flour tortillas,3.485792748232013
-mexican,2,corn tortillas,3.461754393350899
-mexican,3,tequila,2.9361278927004366
-mexican,4,masa harina,2.9123193909882814
-mexican,5,mexican chocolate,2.885917846144049
-mexican,6,taco seasoning,2.7758977016809365
-mexican,7,ancho chile pepper,2.6973939814912278
-mexican,8,taco seasoning mix,2.628660241001393
-mexican,9,tortillas,2.6251137519688963
-mexican,10,enchilada sauce,2.5568210094903905
-moroccan,1,green tea,4.086532628598598
-moroccan,2,harissa,3.8702751926360976
-moroccan,3,couscous,3.6533584884162966
-moroccan,4,ras el hanout,3.5883460846441237
-moroccan,5,orange flower water,3.4678068007414593
-moroccan,6,preserved lemon,3.3553950331221616
-moroccan,7,meyer lemon,3.2851534975057595
-moroccan,8,semolina,2.8955363846934588
-moroccan,9,rose water,2.747866572031739
-moroccan,10,cinnamon,2.4645006523798556
-russian,1,beets,3.9284737018594824
-russian,2,sauerkraut,3.4044223382432515
-russian,3,pork sirloin,3.305941451427919
-russian,4,kasha,3.224064253625346
-russian,5,dill,3.058114712141863
-russian,6,red russian kale,2.9918505195124587
-russian,7,pierogi,2.911136424075731
-russian,8,cottage cheese,2.8686838370002006
-russian,9,mrs. dash,2.8279651283235103
-russian,10,frozen raspberries,2.7898103006650783
-southern_us,1,quickcooking grits,3.9716472940848377
-southern_us,2,grits,3.9593946398529907
-southern_us,3,black-eyed peas,3.80297314764933
-southern_us,4,collard greens,3.4770525170370794
-southern_us,5,bourbon whiskey,2.604984059188708
-southern_us,6,vanilla wafers,2.581485675116901
-southern_us,7,peaches,2.568701060484784
-southern_us,8,key lime juice,2.533365273955178
-southern_us,9,green tomatoes,2.4749316170660833
-southern_us,10,white cornmeal,2.447690118373023
-spanish,1,spanish paprika,3.473412618952966
-spanish,2,chorizo sausage,3.2432185277153422
-spanish,3,spanish chorizo,2.968940299512154
-spanish,4,cava,2.7386072558985184
-spanish,5,manchego cheese,2.5676649921299313
-spanish,6,sherry vinegar,2.5141958518472607
-spanish,7,serrano ham,2.4403375522418282
-spanish,8,chorizo,2.2397013118188047
-spanish,9,dry sherry,2.191637313100838
-spanish,10,sherry wine vinegar,2.142366077805172
-thai,1,thai red curry paste,4.403931892314781
-thai,2,chunky peanut butter,3.5335182333676296
-thai,3,unsweetened coconut milk,3.216078100497147
-thai,4,red curry paste,3.191359797051114
-thai,5,thai fish sauce,3.0069161315848714
-thai,6,sweet chili sauce,2.9287220873120634
-thai,7,creamy peanut butter,2.8670717407765216
-thai,8,thai green curry paste,2.8493410699340944
-thai,9,black tea,2.6949349820072146
-thai,10,green curry paste,2.591950653278368
-vietnamese,1,vietnamese fish sauce,4.4885232775163955
-vietnamese,2,maggi,2.8134003015045135
-vietnamese,3,vietnamese coriander,2.7246126222149134
-vietnamese,4,asian fish sauce,2.7109730205889133
-vietnamese,5,tapioca starch,2.684330527145798
-vietnamese,6,fish sauce,2.5206164803292452
-vietnamese,7,nuoc mam,2.4146857641236887
-vietnamese,8,nuoc nam,2.406795169339391
-vietnamese,9,rice paper,2.160133995633202
-vietnamese,10,coffee,2.112429903965713
+cuisine,rank,ingredient,log_probability
+brazilian,1,salt,-3.691126285423456
+brazilian,2,onions,-4.067456970641653
+brazilian,3,olive oil,-4.186645487906771
+brazilian,4,lime,-4.467319823201148
+brazilian,5,water,-4.489919655118388
+brazilian,6,garlic cloves,-4.536711816625147
+brazilian,7,garlic,-4.548760155141323
+brazilian,8,cachaca,-4.7059457386637344
+brazilian,9,sugar,-4.720231695911211
+brazilian,10,tomatoes,-4.810518542583312
+british,1,salt,-3.309826263822508
+british,2,all-purpose flour,-3.8454978861750293
+british,3,butter,-3.9149400948971307
+british,4,milk,-4.009127309956831
+british,5,eggs,-4.064979387882725
+british,6,unsalted butter,-4.064979387882725
+british,7,sugar,-4.146546320130074
+british,8,onions,-4.36052519679472
+british,9,baking powder,-4.511756166518643
+british,10,large eggs,-4.6148516755456175
+cajun_creole,1,salt,-3.4256658041383723
+cajun_creole,2,onions,-3.7651014049971208
+cajun_creole,3,garlic,-4.122181125302441
+cajun_creole,4,green bell pepper,-4.2184364209537994
+cajun_creole,5,butter,-4.2243976904702984
+cajun_creole,6,olive oil,-4.279711328454351
+cajun_creole,7,cayenne pepper,-4.341620345052897
+cajun_creole,8,cajun seasoning,-4.3551569307704305
+cajun_creole,9,all-purpose flour,-4.361994564248035
+cajun_creole,10,water,-4.4004608450758305
+chinese,1,soy sauce,-3.2561341613637813
+chinese,2,sesame oil,-3.6544739995348596
+chinese,3,salt,-3.663250797510419
+chinese,4,corn starch,-3.6643533334545193
+chinese,5,sugar,-3.759167221649771
+chinese,6,garlic,-3.8360312389907376
+chinese,7,water,-3.8373418551678578
+chinese,8,green onions,-4.030608335619123
+chinese,9,vegetable oil,-4.072856698284615
+chinese,10,scallions,-4.091282680230983
+filipino,1,salt,-3.252835895986192
+filipino,2,garlic,-3.5112932117794777
+filipino,3,onions,-3.5584717720545687
+filipino,4,water,-3.5584717720545687
+filipino,5,soy sauce,-3.769212683888308
+filipino,6,pepper,-4.000841437098184
+filipino,7,oil,-4.1816603640076035
+filipino,8,sugar,-4.380331058803088
+filipino,9,carrots,-4.440726769092827
+filipino,10,ground black pepper,-4.47234995752334
+french,1,salt,-3.1933598572113135
+french,2,sugar,-3.828794837401859
+french,3,all-purpose flour,-3.9003119003847173
+french,4,unsalted butter,-3.9019982414251535
+french,5,olive oil,-4.039273825874747
+french,6,butter,-4.043153559160336
+french,7,water,-4.200711397309209
+french,8,large eggs,-4.256866500138937
+french,9,garlic cloves,-4.286172626724436
+french,10,ground black pepper,-4.331807921431056
+greek,1,salt,-3.2877683705294514
+greek,2,olive oil,-3.414449141605699
+greek,3,dried oregano,-4.050658610158417
+greek,4,garlic cloves,-4.100669030733078
+greek,5,feta cheese crumbles,-4.1046216050489015
+greek,6,extra-virgin olive oil,-4.200129824263716
+greek,7,fresh lemon juice,-4.2311057521580215
+greek,8,ground black pepper,-4.240135158877416
+greek,9,garlic,-4.258442306321772
+greek,10,pepper,-4.320366848881666
+indian,1,salt,-3.066025238641373
+indian,2,onions,-3.5473096258835612
+indian,3,garam masala,-3.8737942638764267
+indian,4,water,-3.9237155022517953
+indian,5,ground turmeric,-4.042641787146682
+indian,6,garlic,-4.045390929771603
+indian,7,cumin seed,-4.086126899086421
+indian,8,ground cumin,-4.106402756617936
+indian,9,vegetable oil,-4.247592198732218
+indian,10,oil,-4.330095105165348
+irish,1,salt,-3.2338494794414787
+irish,2,all-purpose flour,-3.7734152941662007
+irish,3,butter,-3.7734152941662007
+irish,4,onions,-4.27818488125515
+irish,5,sugar,-4.373117773750717
+irish,6,potatoes,-4.373117773750717
+irish,7,baking soda,-4.415496996719579
+irish,8,baking powder,-4.441814305036952
+irish,9,milk,-4.450742935781253
+irish,10,carrots,-4.5060565737653056
+italian,1,salt,-3.154876358491695
+italian,2,olive oil,-3.259449162411272
+italian,3,garlic cloves,-3.9124366278091607
+italian,4,grated parmesan cheese,-3.9374457461784047
+italian,5,garlic,-4.0082717987470176
+italian,6,ground black pepper,-4.026790846514255
+italian,7,extra-virgin olive oil,-4.085232839883146
+italian,8,onions,-4.179039563288689
+italian,9,water,-4.3433858008640085
+italian,10,butter,-4.365480839952701
+jamaican,1,salt,-3.3810969656704204
+jamaican,2,onions,-4.031559226379415
+jamaican,3,water,-4.154036258739078
+jamaican,4,garlic,-4.249672224504909
+jamaican,5,ground allspice,-4.3318079214310545
+jamaican,6,pepper,-4.35543106719449
+jamaican,7,scallions,-4.473712234866156
+jamaican,8,dried thyme,-4.529025872850208
+jamaican,9,black pepper,-4.548165213060906
+jamaican,10,garlic cloves,-4.5676780272844875
+japanese,1,soy sauce,-3.4223144823114113
+japanese,2,salt,-3.7067368096926803
+japanese,3,mirin,-3.7552311596312906
+japanese,4,sugar,-3.7577187231030926
+japanese,5,water,-3.8035866356825982
+japanese,6,sake,-4.084770959476859
+japanese,7,rice vinegar,-4.186491972984931
+japanese,8,vegetable oil,-4.249629309255334
+japanese,9,scallions,-4.317023226989309
+japanese,10,ginger,-4.503274061923153
+korean,1,soy sauce,-3.3927799883201057
+korean,2,sesame oil,-3.4505577889869166
+korean,3,garlic,-3.7353526661973673
+korean,4,green onions,-3.768856637428769
+korean,5,sugar,-3.8653600330910214
+korean,6,salt,-3.915370453665682
+korean,7,water,-3.9597325663193823
+korean,8,sesame seeds,-4.041322862643296
+korean,9,onions,-4.110795235458064
+korean,10,scallions,-4.1700718453876044
+mexican,1,salt,-3.294747148065305
+mexican,2,onions,-3.894440476335121
+mexican,3,ground cumin,-3.998054201739632
+mexican,4,garlic,-4.019826833575768
+mexican,5,olive oil,-4.041308288669886
+mexican,6,chili powder,-4.083278027029814
+mexican,7,jalapeno chilies,-4.158849011693326
+mexican,8,sour cream,-4.221847797186867
+mexican,9,avocado,-4.25298238747403
+mexican,10,corn tortillas,-4.350547143341908
+moroccan,1,salt,-3.5186131144373523
+moroccan,2,olive oil,-3.5210344231263626
+moroccan,3,ground cumin,-3.6896323987005193
+moroccan,4,onions,-3.9066969039383466
+moroccan,5,ground cinnamon,-4.133859214847474
+moroccan,6,garlic cloves,-4.133859214847474
+moroccan,7,water,-4.336520455878552
+moroccan,8,ground ginger,-4.375631585995177
+moroccan,9,carrots,-4.4966248972818095
+moroccan,10,paprika,-4.529307544712168
+russian,1,salt,-3.3655013564818477
+russian,2,sugar,-3.9835507108107135
+russian,3,onions,-4.050020355818455
+russian,4,all-purpose flour,-4.21395528636197
+russian,5,sour cream,-4.2637581088457885
+russian,6,eggs,-4.307243220785527
+russian,7,water,-4.316171851529829
+russian,8,butter,-4.3810093710251365
+russian,9,unsalted butter,-4.492235006135361
+russian,10,large eggs,-4.581680066487287
+southern_us,1,salt,-2.9773255281427566
+southern_us,2,butter,-3.5785617628719137
+southern_us,3,all-purpose flour,-3.6051977201205263
+southern_us,4,sugar,-3.753028941550724
+southern_us,5,large eggs,-4.098455324490309
+southern_us,6,baking powder,-4.121491573506713
+southern_us,7,water,-4.182244716261528
+southern_us,8,unsalted butter,-4.228452638265799
+southern_us,9,milk,-4.243825731182857
+southern_us,10,buttermilk,-4.261013654315112
+spanish,1,salt,-3.3899508799806215
+spanish,2,olive oil,-3.562547886882581
+spanish,3,garlic cloves,-3.8506601593840166
+spanish,4,extra-virgin olive oil,-3.979041326032224
+spanish,5,onions,-3.986899912644745
+spanish,6,water,-4.456509142358648
+spanish,7,tomatoes,-4.5016781107265595
+spanish,8,ground black pepper,-4.5149673428452415
+spanish,9,red bell pepper,-4.562921735967278
+spanish,10,pepper,-4.628162257835679
+thai,1,fish sauce,-3.5897831391182606
+thai,2,garlic,-4.001261494449877
+thai,3,salt,-4.0456584279503245
+thai,4,coconut milk,-4.160450983688599
+thai,5,vegetable oil,-4.21271251261349
+thai,6,soy sauce,-4.221694608929318
+thai,7,sugar,-4.227727809733485
+thai,8,water,-4.290150567651693
+thai,9,garlic cloves,-4.326220051469723
+thai,10,fresh lime juice,-4.417032847163191
+vietnamese,1,fish sauce,-3.560503086337385
+vietnamese,2,sugar,-3.6909455331061345
+vietnamese,3,salt,-3.955198372261494
+vietnamese,4,garlic,-4.054486206708878
+vietnamese,5,water,-4.105889385168843
+vietnamese,6,carrots,-4.252377192250532
+vietnamese,7,soy sauce,-4.486393891940559
+vietnamese,8,shallots,-4.512453998610424
+vietnamese,9,garlic cloves,-4.532454665317093
+vietnamese,10,vegetable oil,-4.5528635369483

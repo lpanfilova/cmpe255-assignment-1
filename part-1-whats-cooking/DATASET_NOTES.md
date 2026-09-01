@@ -1,4 +1,4 @@
-# Dataset Notes and Modeling Plan
+# Dataset Notes, Modeling Plan, and Final Implementation
 
 ## Source files inspected
 
@@ -99,7 +99,9 @@ The 20 most common ingredients across train and test are:
 - Do not use `id` as a feature. It is only an identifier and could create spurious validation patterns.
 - Do not fit text normalization, the vectorizer vocabulary, feature selection, or hyperparameter choices on validation/test information. Fit all transformations within each training fold, then refit on all training data only after selecting the approach.
 
-## Recommended modeling strategy
+## Initial modeling strategy
+
+This section records the modeling plan established before the experiment was run. It is retained to document the original rationale and should not be read as a claim that its originally recommended candidate became the final selected model.
 
 Use the full ingredient phrase as the fundamental feature, rather than splitting phrases into individual words. A binary multi-hot representation is intuitive: each ingredient is a feature with value 1 when it appears in the recipe and 0 otherwise. Lowercase and trim ingredient strings consistently, but avoid aggressive stemming, stop-word removal, or manually collapsing related ingredients in the first version; phrases such as `soy sauce` and `olive oil` carry useful meaning.
 
@@ -113,6 +115,52 @@ Use 5-fold **stratified group cross-validation**, grouping by a normalized, orde
 
 The Kaggle-style submission should contain one predicted cuisine for each test `id`; therefore accuracy is the primary competition-aligned metric. Macro F1, a confusion matrix, and per-class recall should accompany the assignment discussion because the labels are imbalanced.
 
+### Implementation deviations from the initial plan
+
+- The initial plan called for 5-fold `StratifiedGroupKFold`. The completed experiment used 3-fold `StratifiedGroupKFold` as a practical runtime compromise while preserving grouped, stratified validation.
+- The planned broader `C` and class-weight comparisons were intentionally not expanded into a large hyperparameter search. The completed experiment compared the four documented baseline/model configurations with the same grouped folds and random state.
+
+## Canonical environment
+
+The canonical project environment is Conda environment `cmpe255-a1`:
+
+| Package | Version |
+| --- | --- |
+| Python | 3.11.16 |
+| NumPy | 2.4.6 |
+| pandas | 3.0.5 |
+| scikit-learn | 1.9.0 |
+| matplotlib | 3.11.1 |
+| seaborn | 0.13.2 |
+| joblib | 1.6.0 |
+
+The original notebook was produced against an older environment. After standardizing on Python 3.11 and scikit-learn 1.9, a compatibility audit identified version-sensitive Logistic Regression and `LinearSVC` behavior. The complete notebook was therefore rerun in the canonical environment, and all final artifacts were regenerated.
+
+## Final model comparison
+
+These are the canonical 3-fold grouped-validation results:
+
+| Model | Accuracy | Macro F1 |
+| --- | ---: | ---: |
+| Multinomial Naive Bayes | 0.7453 | 0.6527 |
+| Linear SVM | 0.7426 | 0.6552 |
+| Logistic Regression | 0.7405 | 0.6660 |
+| Majority-class baseline | 0.1971 | 0.0165 |
+
+Accuracy remained the primary model-selection metric. `MultinomialNB(alpha=0.5)` achieved the highest accuracy and was selected as the final model. Logistic Regression achieved the highest macro F1, illustrating the tradeoff between overall accuracy and more balanced per-class performance.
+
+## Final selected model and artifacts
+
+The selected pipeline uses a binary `CountVectorizer` representation of full normalized ingredient phrases. Ingredients are lowercased, trimmed, and de-duplicated within each recipe; phrases are not split into individual words. Recipe `id` is excluded. The final `MultinomialNB(alpha=0.5)` model was fitted on all training recipes only after model comparison.
+
+This final modeling approach regenerated:
+
+- `outputs/submission.csv` with 9,944 Kaggle-format predictions
+- `outputs/cuisine_classifier.joblib`
+- evaluation and interpretation artifacts in `outputs/`
+
+The same fitted modeling approach is used by the Streamlit demonstration app.
+
 ## Useful EDA visualizations
 
 1. A sorted horizontal bar chart of cuisine counts and percentages.
@@ -122,6 +170,9 @@ The Kaggle-style submission should contain one predicted cuisine for each test `
 5. A cuisine-by-ingredient-count box plot or violin plot to compare recipe complexity across cuisines.
 6. After model evaluation begins, a normalized confusion matrix and a per-class precision/recall/F1 chart.
 
-## Scope for the next step
+## Current project status
 
-This review intentionally does not train any model or build an application. The next implementation step should create a reproducible notebook or script that performs the grouped validation and baseline/model comparison described above.
+- EDA and model comparison are complete.
+- The canonical notebook executes successfully from top to bottom.
+- A Kaggle-format submission has been generated.
+- A small Streamlit prediction app has been created and smoke-tested.
