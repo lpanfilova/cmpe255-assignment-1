@@ -10,7 +10,7 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [03 - Customer Segmentation Clustering](03_customer_segmentation_clustering/) | Unsupervised customer segmentation | Complete |
 | [04 - Associative Pattern Mining](04_associative_pattern_mining/) | Association rules and frequent patterns | Complete |
 | [05 - Data Science Skills Lab](05_data_science_skills_lab/) | Applied data science skills | Complete |
-| 06 - Anomaly Detection | Outlier and anomaly detection | Not started |
+| [06 - Anomaly Detection](06_anomaly_detection/) | Outlier and anomaly detection | Complete |
 | 07 - AutoML AutoGluon | Automated machine learning with AutoGluon | Not started |
 | 08 - Data Science Visual Mastery | Data visualization | Not started |
 | 09 - FlowForge DAG Engine | Workflow orchestration with DAGs | Not started |

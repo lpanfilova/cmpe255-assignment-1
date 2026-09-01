@@ -62,7 +62,17 @@ Keep the project reasonably scoped and runnable locally, using a manageable data
 Work in `part-2-data-science-examples/05_data_science_skills_lab`.
 Install param087 GitHub `agent-ml-skills` and nimrodfisher `data-analytics-skills`, and demonstrate every skill on an appropriate popular Kaggle dataset. Include the CRISP-DM steps. Keep the implementation reasonably scoped and runnable locally, avoiding unnecessary expansion beyond demonstrating the requested skills. Add a concise README with setup/run instructions, test the application and skill demonstrations, update the Part 2 README to mark Project 05 complete and link its directory while preserving existing project entries, and record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
 
-## Projects 06-13
+## Project 06: Anomaly Detection
+
+### Prompt
+
+Work in `part-2-data-science-examples/06_anomaly_detection`.
+
+Build an anomaly-detection project using a popular Kaggle dataset and popular methods. Follow the CRISP-DM framework and include a polished data science administration dashboard. Research relevant papers and implement a practical autoresearch hill-climbing loop, aligning dashboard details with the research. Include the details a data scientist and AI engineer would care about.
+
+Keep the project reasonably scoped and runnable locally, using a manageable dataset or sample if needed. Add a concise README with setup/run instructions and key results. Test the anomaly-detection pipeline and dashboard. Update the Part 2 README to mark Project 06 complete and link its directory while preserving existing project entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
+
+## Projects 07-13
 
 Add one section per project using this pattern:
 
