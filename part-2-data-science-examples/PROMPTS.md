@@ -10,7 +10,13 @@ Keep the project self-contained, functional, and reasonably scoped. Add a concis
 
 Do not modify Part 1. Do not commit or push.
 
-## Projects 01-13
+## Project 01: NYC Taxi Trip Prediction
+
+### Prompt
+
+Work in `part-2-data-science-examples/01_nyc_taxi_trip_prediction`. Build an end-to-end data science project inspired by the Kaggle NYC taxi challenge, including data, training, deployment, the CRISP-DM framework, and an excellent frontend with an interactive map and trip estimation. Keep it reasonably scoped and runnable locally, using a manageable sample rather than excessive training or tuning. Add concise setup/run instructions and main results, and test the important functionality. Update the Part 2 index to mark Project 01 complete while preserving all other entries. Do not modify Part 1, commit, or push.
+
+## Projects 02-13
 
 Add one section per project using this pattern:
 

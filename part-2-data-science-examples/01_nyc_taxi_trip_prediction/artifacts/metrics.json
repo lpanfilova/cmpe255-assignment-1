@@ -1,0 +1,9 @@
+{
+  "source": "generated NYC-like sample (seed=42)",
+  "rows": 6000,
+  "test_rows": 1200,
+  "mae_seconds": 74.9,
+  "rmsle": 0.1116,
+  "r2": 0.9804,
+  "baseline_mae_seconds": 537.6
+}

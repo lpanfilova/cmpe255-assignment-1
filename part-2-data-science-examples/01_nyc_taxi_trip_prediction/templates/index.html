@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NYC TripLens</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">MACHINE LEARNING · NYC</span><h1>Know the ride<br><em>before you go.</em></h1><p>Place two pins on the map. TripLens estimates taxi time from location, distance, and city rhythm.</p></header>
+    <section class="workspace">
+      <div class="map-wrap"><div id="map"></div><div class="map-hint" id="hint">Click once for pickup · again for drop-off</div></div>
+      <aside>
+        <div class="step"><b>01</b><div><label>Pickup</label><span id="pickupText">Choose on map</span></div></div>
+        <div class="step"><b>02</b><div><label>Drop-off</label><span id="dropoffText">Choose on map</span></div></div>
+        <label for="pickupTime">Pickup time</label><input id="pickupTime" type="datetime-local" required>
+        <label for="passengers">Passengers</label><select id="passengers"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        <button id="estimate" disabled>Estimate trip <span>→</span></button>
+        <button id="reset" class="ghost">Reset map</button>
+        <div id="result" class="result" aria-live="polite"><small>ESTIMATED DURATION</small><strong>—</strong><p>Select a pickup and destination to begin.</p></div>
+      </aside>
+    </section>
+    <section class="metrics"><div><strong>{{ metrics.rows }}</strong><span>training trips</span></div><div><strong>{{ metrics.mae_seconds }}s</strong><span>test MAE</span></div><div><strong>{{ metrics.r2 }}</strong><span>test R²</span></div><div><strong>{{ metrics.rmsle }}</strong><span>test RMSLE</span></div></section>
+    <footer>Model trained on a reproducible NYC-like sample · Map © OpenStreetMap contributors</footer>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
+
