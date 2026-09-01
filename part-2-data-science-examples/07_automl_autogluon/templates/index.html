@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AutoML Research Console</title><link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"></head>
+<body><header><div><p class="eyebrow">PROJECT 07 · AUTOGLUON</p><h1>AutoML Research Console</h1><p>Budget-aware model research, evaluation, and deployment readiness across tabular tasks.</p></div><div class="status"><i></i><span id="freshness">Loading artifacts…</span></div></header>
+<nav><button class="active" data-view="overview">Overview</button><button data-view="research">Research log</button><button data-view="crisp">CRISP-DM</button><button data-view="deployment">Deployment</button></nav>
+<main id="app"><section class="loading">Reading experiment artifacts…</section></main>
+<footer>Local read-only dashboard · Source: generated artifacts/metrics.json</footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script></body></html>

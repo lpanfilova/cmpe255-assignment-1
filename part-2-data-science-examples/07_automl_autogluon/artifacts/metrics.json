@@ -1,0 +1,369 @@
+{
+  "project": "AutoML Research Console",
+  "framework": "CRISP-DM",
+  "generated_at": "2026-09-01T22:24:57.932224+00:00",
+  "budget": {
+    "seconds_per_candidate": 15,
+    "candidates_per_task": 2,
+    "cpu_limit": 2,
+    "gpu": false
+  },
+  "methodology": {
+    "search_policy": "greedy hill climbing over an ordered AutoGluon portfolio",
+    "selection_data": "validation only",
+    "holdout_used_for_search": false,
+    "paper_alignment": [
+      "heterogeneous model portfolio",
+      "stacked/weighted ensembles",
+      "anytime time budgets"
+    ]
+  },
+  "tasks": {
+    "binary": {
+      "spec": {
+        "key": "binary",
+        "title": "Breast cancer screening",
+        "problem_type": "binary",
+        "metric": "roc_auc",
+        "label": "target"
+      },
+      "rows": 569,
+      "features": 30,
+      "split": {
+        "train": 341,
+        "validation": 114,
+        "test": 114
+      },
+      "winner": "diverse_portfolio",
+      "test_metrics": {
+        "roc_auc": 0.9930555555555557,
+        "accuracy": 0.9473684210526315,
+        "latency_ms_row": 0.5888000000196738
+      },
+      "trials": [
+        {
+          "iteration": 1,
+          "candidate": "fast_baseline",
+          "accepted": true,
+          "utility": 0.9857517196200459,
+          "duration_sec": 1.514838699993561,
+          "validation": {
+            "roc_auc": 0.9857517196200459,
+            "accuracy": 0.956140350877193,
+            "latency_ms_row": 0.8278175438662354
+          },
+          "model_count": 3
+        },
+        {
+          "iteration": 2,
+          "candidate": "diverse_portfolio",
+          "accepted": true,
+          "utility": 0.9909924664264658,
+          "duration_sec": 1.7763834999932442,
+          "validation": {
+            "roc_auc": 0.9909924664264658,
+            "accuracy": 0.956140350877193,
+            "latency_ms_row": 0.8377500000693672
+          },
+          "model_count": 4
+        }
+      ],
+      "leaderboard": [
+        {
+          "model": "ExtraTrees",
+          "score_test": 0.9930555556,
+          "score_val": 0.9909924664,
+          "eval_metric": "roc_auc",
+          "pred_time_test": 0.0466833115,
+          "pred_time_val": 0.0394611359,
+          "fit_time": 0.5395793915,
+          "pred_time_test_marginal": 0.0466833115,
+          "pred_time_val_marginal": 0.0394611359,
+          "fit_time_marginal": 0.5395793915,
+          "stack_level": 1,
+          "can_infer": true,
+          "fit_order": 3
+        },
+        {
+          "model": "WeightedEnsemble_L2",
+          "score_test": 0.9930555556,
+          "score_val": 0.9909924664,
+          "eval_metric": "roc_auc",
+          "pred_time_test": 0.0512034893,
+          "pred_time_val": 0.0404622555,
+          "fit_time": 0.5595767498,
+          "pred_time_test_marginal": 0.0045201778,
+          "pred_time_val_marginal": 0.0010011196,
+          "fit_time_marginal": 0.0199973583,
+          "stack_level": 2,
+          "can_infer": true,
+          "fit_order": 4
+        },
+        {
+          "model": "RandomForest",
+          "score_test": 0.9918981481,
+          "score_val": 0.9857517196,
+          "eval_metric": "roc_auc",
+          "pred_time_test": 0.0733437538,
+          "pred_time_val": 0.0505363941,
+          "fit_time": 0.5812115669,
+          "pred_time_test_marginal": 0.0733437538,
+          "pred_time_val_marginal": 0.0505363941,
+          "fit_time_marginal": 0.5812115669,
+          "stack_level": 1,
+          "can_infer": true,
+          "fit_order": 2
+        },
+        {
+          "model": "KNeighbors",
+          "score_test": 0.9487433862,
+          "score_val": 0.9551261055,
+          "eval_metric": "roc_auc",
+          "pred_time_test": 0.0185112953,
+          "pred_time_val": 0.0040009022,
+          "fit_time": 0.0060005188,
+          "pred_time_test_marginal": 0.0185112953,
+          "pred_time_val_marginal": 0.0040009022,
+          "fit_time_marginal": 0.0060005188,
+          "stack_level": 1,
+          "can_infer": true,
+          "fit_order": 1
+        }
+      ],
+      "sample_predictions": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "model_path": "models/binary/diverse_portfolio"
+    },
+    "multiclass": {
+      "spec": {
+        "key": "multiclass",
+        "title": "Iris species",
+        "problem_type": "multiclass",
+        "metric": "accuracy",
+        "label": "target"
+      },
+      "rows": 150,
+      "features": 4,
+      "split": {
+        "train": 90,
+        "validation": 30,
+        "test": 30
+      },
+      "winner": "fast_baseline",
+      "test_metrics": {
+        "accuracy": 0.9666666666666667,
+        "log_loss": 0.0869125118431461,
+        "latency_ms_row": 0.5436133331386372
+      },
+      "trials": [
+        {
+          "iteration": 1,
+          "candidate": "fast_baseline",
+          "accepted": true,
+          "utility": 0.9333333333333333,
+          "duration_sec": 1.193326699998579,
+          "validation": {
+            "accuracy": 0.9333333333333333,
+            "log_loss": 0.06852427296700155,
+            "latency_ms_row": 1.6956533334450796
+          },
+          "model_count": 3
+        },
+        {
+          "iteration": 2,
+          "candidate": "diverse_portfolio",
+          "accepted": false,
+          "utility": 0.9333333333333333,
+          "duration_sec": 1.7628236999880755,
+          "validation": {
+            "accuracy": 0.9333333333333333,
+            "log_loss": 0.06852427296700155,
+            "latency_ms_row": 1.5567633333072688
+          },
+          "model_count": 4
+        }
+      ],
+      "leaderboard": [
+        {
+          "model": "KNeighbors",
+          "score_test": 0.9666666667,
+          "score_val": 0.9333333333,
+          "eval_metric": "accuracy",
+          "pred_time_test": 0.0145142078,
+          "pred_time_val": 0.0127038956,
+          "fit_time": 0.0040006638,
+          "pred_time_test_marginal": 0.0145142078,
+          "pred_time_val_marginal": 0.0127038956,
+          "fit_time_marginal": 0.0040006638,
+          "stack_level": 1,
+          "can_infer": true,
+          "fit_order": 1
+        },
+        {
+          "model": "WeightedEnsemble_L2",
+          "score_test": 0.9666666667,
+          "score_val": 0.9333333333,
+          "eval_metric": "accuracy",
+          "pred_time_test": 0.0165586472,
+          "pred_time_val": 0.0137040615,
+          "fit_time": 0.0270118713,
+          "pred_time_test_marginal": 0.0020444393,
+          "pred_time_val_marginal": 0.0010001659,
+          "fit_time_marginal": 0.0230112076,
+          "stack_level": 2,
+          "can_infer": true,
+          "fit_order": 3
+        },
+        {
+          "model": "RandomForest",
+          "score_test": 0.9333333333,
+          "score_val": 0.9333333333,
+          "eval_metric": "accuracy",
+          "pred_time_test": 0.0721232891,
+          "pred_time_val": 0.0488390923,
+          "fit_time": 0.556396246,
+          "pred_time_test_marginal": 0.0721232891,
+          "pred_time_val_marginal": 0.0488390923,
+          "fit_time_marginal": 0.556396246,
+          "stack_level": 1,
+          "can_infer": true,
+          "fit_order": 2
+        }
+      ],
+      "sample_predictions": [
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "model_path": "models/multiclass/fast_baseline"
+    },
+    "regression": {
+      "spec": {
+        "key": "regression",
+        "title": "Diabetes progression",
+        "problem_type": "regression",
+        "metric": "root_mean_squared_error",
+        "label": "target"
+      },
+      "rows": 442,
+      "features": 10,
+      "split": {
+        "train": 264,
+        "validation": 89,
+        "test": 89
+      },
+      "winner": "diverse_portfolio",
+      "test_metrics": {
+        "rmse": 52.70145324490493,
+        "r2": 0.47577130554961156,
+        "latency_ms_row": 1.786451685383623
+      },
+      "trials": [
+        {
+          "iteration": 1,
+          "candidate": "fast_baseline",
+          "accepted": true,
+          "utility": -52.68129270949371,
+          "duration_sec": 1.0058908000064548,
+          "validation": {
+            "rmse": 52.68129270949371,
+            "r2": 0.4934459566548606,
+            "latency_ms_row": 1.7386359550788726
+          },
+          "model_count": 3
+        },
+        {
+          "iteration": 2,
+          "candidate": "diverse_portfolio",
+          "accepted": true,
+          "utility": -52.051667150060865,
+          "duration_sec": 1.804665899995598,
+          "validation": {
+            "rmse": 52.051667150060865,
+            "r2": 0.5054818593160979,
+            "latency_ms_row": 3.0234168539362636
+          },
+          "model_count": 4
+        }
+      ],
+      "leaderboard": [
+        {
+          "model": "ExtraTrees",
+          "score_test": -52.3653210926,
+          "score_val": -52.3413445404,
+          "eval_metric": "root_mean_squared_error",
+          "pred_time_test": 0.0736324787,
+          "pred_time_val": 0.0499732494,
+          "fit_time": 0.5184240341,
+          "pred_time_test_marginal": 0.0736324787,
+          "pred_time_val_marginal": 0.0499732494,
+          "fit_time_marginal": 0.5184240341,
+          "stack_level": 1,
+          "can_infer": true,
+          "fit_order": 3
+        },
+        {
+          "model": "WeightedEnsemble_L2",
+          "score_test": -52.7014532449,
+          "score_val": -52.0516671501,
+          "eval_metric": "root_mean_squared_error",
+          "pred_time_test": 0.1579742432,
+          "pred_time_val": 0.1224908829,
+          "fit_time": 1.0062637329,
+          "pred_time_test_marginal": 0.0040230751,
+          "pred_time_val_marginal": 0.0,
+          "fit_time_marginal": 0.0050384998,
+          "stack_level": 2,
+          "can_infer": true,
+          "fit_order": 4
+        },
+        {
+          "model": "RandomForest",
+          "score_test": -55.1505743554,
+          "score_val": -54.3447012942,
+          "eval_metric": "root_mean_squared_error",
+          "pred_time_test": 0.0667407513,
+          "pred_time_val": 0.0594964027,
+          "fit_time": 0.4778008461,
+          "pred_time_test_marginal": 0.0667407513,
+          "pred_time_val_marginal": 0.0594964027,
+          "fit_time_marginal": 0.4778008461,
+          "stack_level": 1,
+          "can_infer": true,
+          "fit_order": 2
+        },
+        {
+          "model": "KNeighbors",
+          "score_test": -57.4235125172,
+          "score_val": -56.6053160297,
+          "eval_metric": "root_mean_squared_error",
+          "pred_time_test": 0.0135779381,
+          "pred_time_val": 0.0130212307,
+          "fit_time": 0.0050003529,
+          "pred_time_test_marginal": 0.0135779381,
+          "pred_time_val_marginal": 0.0130212307,
+          "fit_time_marginal": 0.0050003529,
+          "stack_level": 1,
+          "can_infer": true,
+          "fit_order": 1
+        }
+      ],
+      "sample_predictions": [
+        125.44640350341797,
+        161.28773498535156,
+        151.40814208984375,
+        247.50559997558594,
+        118.24240112304688
+      ],
+      "model_path": "models/regression/diverse_portfolio"
+    }
+  },
+  "total_duration_sec": 14.433467900002142
+}

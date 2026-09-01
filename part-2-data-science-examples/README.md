@@ -11,7 +11,7 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [04 - Associative Pattern Mining](04_associative_pattern_mining/) | Association rules and frequent patterns | Complete |
 | [05 - Data Science Skills Lab](05_data_science_skills_lab/) | Applied data science skills | Complete |
 | [06 - Anomaly Detection](06_anomaly_detection/) | Outlier and anomaly detection | Complete |
-| 07 - AutoML AutoGluon | Automated machine learning with AutoGluon | Not started |
+| [07 - AutoML AutoGluon](07_automl_autogluon/) | Automated machine learning with AutoGluon | Complete |
 | 08 - Data Science Visual Mastery | Data visualization | Not started |
 | 09 - FlowForge DAG Engine | Workflow orchestration with DAGs | Not started |
 | 10 - CRISP-DM Masters Curriculum | CRISP-DM methodology | Not started |

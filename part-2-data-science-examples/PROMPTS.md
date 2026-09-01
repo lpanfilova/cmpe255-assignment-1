@@ -72,7 +72,17 @@ Build an anomaly-detection project using a popular Kaggle dataset and popular me
 
 Keep the project reasonably scoped and runnable locally, using a manageable dataset or sample if needed. Add a concise README with setup/run instructions and key results. Test the anomaly-detection pipeline and dashboard. Update the Part 2 README to mark Project 06 complete and link its directory while preserving existing project entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
 
-## Projects 07-13
+## Project 07: AutoML AutoGluon
+
+### Prompt
+
+Work in `part-2-data-science-examples/07_automl_autogluon`.
+
+Illustrate AutoML with AutoGluon on various data science tasks. Follow the CRISP-DM framework and include a polished data science administration dashboard. Research relevant papers and implement a practical autoresearch hill-climbing loop, aligning dashboard details with the research. Include the details a data scientist and AI engineer would care about.
+
+Keep the project reasonably scoped and runnable locally. Use manageable datasets/samples and short AutoGluon training time limits so it does not require excessive compute. Add a concise README with setup/run instructions and key results. Test the AutoGluon training/inference workflow and dashboard. Update the Part 2 README to mark Project 07 complete and link its directory while preserving existing project entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
+
+## Projects 08-13
 
 Add one section per project using this pattern:
 
