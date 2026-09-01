@@ -15,7 +15,7 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [08 - Data Science Visual Mastery](08_datascience_visual_mastery/) | Interactive foundations: Bayes, evaluation, calculus, and backpropagation | Complete |
 | [09 - FlowForge DAG Engine](09_flowforge_dag_engine/) | Full-stack workflow orchestration with deterministic DAGs | Complete |
 | [10 - CRISP-DM Masters Curriculum](10_crispdm_masters_curriculum/) | End-to-end CRISP-DM methodology and multi-method Titanic analysis | Complete |
-| 11 - Enterprise DS Audit | Enterprise data science auditing | Not started |
+| [11 - Enterprise DS Audit](11_enterprise_ds_audit/) | Enterprise data science auditing | Complete |
 | 12 - Time Series Forecasting | Forecasting temporal data | Not started |
 | 13 - CRISP-DM NYC Taxi Audit Platform | CRISP-DM audit platform for NYC taxi data | Not started |
 

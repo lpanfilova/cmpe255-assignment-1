@@ -1,0 +1,4 @@
+const test=require("node:test");const assert=require("node:assert/strict");const audit=require("../audit-data.js");
+test("covers every completed pre-audit project exactly once",()=>{assert.deepEqual(audit.projects.map(p=>p.id),["00","01","02","03","04","05","06","07","08","09","10"])});
+test("scores and dimension contracts are valid",()=>{for(const p of audit.projects){assert.ok(p.score>=0&&p.score<=100);assert.equal(p.scores.length,audit.dimensions.length);assert.ok(p.scores.every(v=>v>=0&&v<=100));assert.ok(p.findings.length>=2)}});
+test("findings use valid severities and repository-relative evidence",()=>{const allowed=new Set(["critical","high","medium","low","info"]);for(const p of audit.projects)for(const f of p.findings){assert.ok(allowed.has(f[0]));assert.equal(f.length,4);assert.match(f[3],new RegExp(`^${p.id}_`))}});

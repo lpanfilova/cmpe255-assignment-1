@@ -153,7 +153,20 @@ Do not modify Part 1. Do not commit or push.
 
 When finished, briefly summarize what was implemented, how it was tested, and how to run it.
 
-## Projects 11-13
+## Project 11: Enterprise DS Audit
+
+### Prompt
+
+Work in `part-2-data-science-examples/11_enterprise_ds_audit`.
+Do a advanced data science audit for all the projects and provide detailed report in the website.
+Audit the existing Part 2 projects without modifying their implementations. Keep the audit reasonably scoped and focus on meaningful data-science issues such as methodology, reproducibility, leakage risks, evaluation, and implementation quality.
+Add a concise README with setup/run instructions. Test that the audit website works.
+Update `part-2-data-science-examples/README.md` to mark Project 11 complete and link to its directory. Preserve existing project entries.
+Record this Project 11 prompt in `part-2-data-science-examples/PROMPTS.md`.
+Do not modify Part 1. Do not commit or push.
+When finished, briefly summarize what was audited, what was implemented, how it was tested, and how to run it.
+
+## Projects 12-13
 
 Add one section per project using this pattern:
 
