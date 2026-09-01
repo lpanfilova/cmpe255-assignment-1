@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "dataset": "Kaggle Titanic train set",
+    "random_state": 42
+  },
+  "understanding": {
+    "rows": 891,
+    "columns": 12,
+    "survival_rate": 0.3838,
+    "missing": {
+      "Age": 177,
+      "Cabin": 687,
+      "Embarked": 2
+    },
+    "class_survival": {
+      "1": 0.6296,
+      "2": 0.4728,
+      "3": 0.2424
+    },
+    "sex_survival": {
+      "female": 0.742,
+      "male": 0.1889
+    }
+  },
+  "clustering": {
+    "best_k": 2,
+    "silhouette": 0.406,
+    "profiles": [
+      {
+        "cluster": 0,
+        "size": 150,
+        "median_age": 14.5,
+        "median_fare": 31.27,
+        "survival_rate": 0.52,
+        "female_share": 0.6
+      },
+      {
+        "cluster": 1,
+        "size": 741,
+        "median_age": 30.0,
+        "median_fare": 12.35,
+        "survival_rate": 0.356,
+        "female_share": 0.302
+      }
+    ],
+    "candidate_scores": {
+      "2": 0.406,
+      "3": 0.298,
+      "4": 0.327,
+      "5": 0.282
+    }
+  },
+  "anomalies": {
+    "count": 45,
+    "rate": 0.051,
+    "top": [
+      {
+        "passenger_id": 439,
+        "name": "Fortune, Mr. Mark",
+        "age": 64.0,
+        "fare": 263.0,
+        "family_size": 6,
+        "score": 0.735
+      },
+      {
+        "passenger_id": 680,
+        "name": "Cardeza, Mr. Thomas Drake Martinez",
+        "age": 36.0,
+        "fare": 512.33,
+        "family_size": 2,
+        "score": 0.705
+      },
+      {
+        "passenger_id": 738,
+        "name": "Lesurer, Mr. Gustave J",
+        "age": 35.0,
+        "fare": 512.33,
+        "family_size": 1,
+        "score": 0.695
+      },
+      {
+        "passenger_id": 259,
+        "name": "Ward, Miss. Anna",
+        "age": 35.0,
+        "fare": 512.33,
+        "family_size": 1,
+        "score": 0.695
+      },
+      {
+        "passenger_id": 847,
+        "name": "Sage, Mr. Douglas Bullen",
+        "age": null,
+        "fare": 69.55,
+        "family_size": 11,
+        "score": 0.691
+      },
+      {
+        "passenger_id": 160,
+        "name": "Sage, Master. Thomas Henry",
+        "age": null,
+        "fare": 69.55,
+        "family_size": 11,
+        "score": 0.691
+      },
+      {
+        "passenger_id": 181,
+        "name": "Sage, Miss. Constance Gladys",
+        "age": null,
+        "fare": 69.55,
+        "family_size": 11,
+        "score": 0.691
+      },
+      {
+        "passenger_id": 793,
+        "name": "Sage, Miss. Stella Anna",
+        "age": null,
+        "fare": 69.55,
+        "family_size": 11,
+        "score": 0.691
+      }
+    ]
+  },
+  "supervised": {
+    "split": {
+      "train": 668,
+      "test": 223
+    },
+    "models": {
+      "Logistic regression": {
+        "accuracy": 0.776,
+        "f1": 0.699,
+        "roc_auc": 0.842
+      },
+      "Random forest": {
+        "accuracy": 0.798,
+        "f1": 0.706,
+        "roc_auc": 0.838
+      }
+    },
+    "best_model": "Logistic regression"
+  },
+  "associations": {
+    "min_support": 0.08,
+    "min_confidence": 0.65,
+    "rules": [
+      {
+        "if": [
+          "embarked=C",
+          "fare=high"
+        ],
+        "then": "class=1",
+        "support": 0.095,
+        "confidence": 0.914,
+        "lift": 3.77
+      },
+      {
+        "if": [
+          "fare=high",
+          "outcome=survived"
+        ],
+        "then": "class=1",
+        "support": 0.15,
+        "confidence": 0.807,
+        "lift": 3.33
+      },
+      {
+        "if": [
+          "age=middle",
+          "fare=high"
+        ],
+        "then": "class=1",
+        "support": 0.089,
+        "confidence": 0.76,
+        "lift": 3.133
+      },
+      {
+        "if": [
+          "class=1",
+          "embarked=C"
+        ],
+        "then": "fare=high",
+        "support": 0.095,
+        "confidence": 1.0,
+        "lift": 3.0
+      },
+      {
+        "if": [
+          "class=1",
+          "outcome=survived"
+        ],
+        "then": "fare=high",
+        "support": 0.15,
+        "confidence": 0.985,
+        "lift": 2.956
+      },
+      {
+        "if": [
+          "class=1",
+          "sex=female"
+        ],
+        "then": "fare=high",
+        "support": 0.103,
+        "confidence": 0.979,
+        "lift": 2.936
+      },
+      {
+        "if": [
+          "fare=high",
+          "sex=female"
+        ],
+        "then": "class=1",
+        "support": 0.103,
+        "confidence": 0.692,
+        "lift": 2.853
+      },
+      {
+        "if": [
+          "fare=high"
+        ],
+        "then": "class=1",
+        "support": 0.229,
+        "confidence": 0.687,
+        "lift": 2.833
+      },
+      {
+        "if": [
+          "class=1"
+        ],
+        "then": "fare=high",
+        "support": 0.229,
+        "confidence": 0.944,
+        "lift": 2.833
+      },
+      {
+        "if": [
+          "fare=high",
+          "sex=male"
+        ],
+        "then": "class=1",
+        "support": 0.126,
+        "confidence": 0.683,
+        "lift": 2.817
+      },
+      {
+        "if": [
+          "age=middle",
+          "class=1"
+        ],
+        "then": "fare=high",
+        "support": 0.089,
+        "confidence": 0.919,
+        "lift": 2.756
+      },
+      {
+        "if": [
+          "class=1",
+          "sex=male"
+        ],
+        "then": "fare=high",
+        "support": 0.126,
+        "confidence": 0.918,
+        "lift": 2.754
+      }
+    ]
+  },
+  "lsh": {
+    "query": {
+      "passenger_id": 1,
+      "name": "Braund, Mr. Owen Harris",
+      "tokens": [
+        "age_decade:20",
+        "class:3",
+        "embarked:S",
+        "family:1",
+        "sex:male"
+      ]
+    },
+    "candidates_examined": 60,
+    "total_rows": 890,
+    "reduction": 0.933,
+    "neighbors": [
+      {
+        "passenger_id": 744,
+        "name": "McNamee, Mr. Neal",
+        "similarity": 1.0,
+        "tokens": [
+          "age_decade:20",
+          "class:3",
+          "embarked:S",
+          "family:1",
+          "sex:male"
+        ]
+      },
+      {
+        "passenger_id": 705,
+        "name": "Hansen, Mr. Henrik Juul",
+        "similarity": 1.0,
+        "tokens": [
+          "age_decade:20",
+          "class:3",
+          "embarked:S",
+          "family:1",
+          "sex:male"
+        ]
+      },
+      {
+        "passenger_id": 665,
+        "name": "Lindqvist, Mr. Eino William",
+        "similarity": 1.0,
+        "tokens": [
+          "age_decade:20",
+          "class:3",
+          "embarked:S",
+          "family:1",
+          "sex:male"
+        ]
+      },
+      {
+        "passenger_id": 478,
+        "name": "Braund, Mr. Lewis Richard",
+        "similarity": 1.0,
+        "tokens": [
+          "age_decade:20",
+          "class:3",
+          "embarked:S",
+          "family:1",
+          "sex:male"
+        ]
+      },
+      {
+        "passenger_id": 443,
+        "name": "Petterson, Mr. Johan Emil",
+        "similarity": 1.0,
+        "tokens": [
+          "age_decade:20",
+          "class:3",
+          "embarked:S",
+          "family:1",
+          "sex:male"
+        ]
+      }
+    ]
+  }
+}

@@ -122,7 +122,38 @@ Record this Project 09 prompt in `part-2-data-science-examples/PROMPTS.md`.
 Do not modify Part 1. Do not commit or push.
 When finished, briefly summarize what was implemented, how it was tested, and how to run it.
 
-## Projects 10-13
+## Project 10: CRISP-DM Masters Curriculum
+
+### Prompt
+
+Work in `part-2-data-science-examples/10_crispdm_masters_curriculum`.
+
+Build an end-to-end data science project around a popular Kaggle dataset that teaches and demonstrates the CRISP-DM methodology in textbook-quality detail.
+
+Include:
+
+1. quizzes for the important data science concepts
+2. exploratory data analysis and preprocessing
+3. unsupervised learning / clustering
+4. anomaly and outlier detection
+5. supervised machine learning
+6. association rule mining
+7. sub-linear search using LSH
+8. a clear conclusion and synthesis of the results
+
+Keep the project reasonably scoped and runnable locally. Use a manageable dataset or sample if needed.
+
+Add a concise README with setup/run instructions and key results. Test that the main data-science workflows and application/dashboard work.
+
+Update `part-2-data-science-examples/README.md` to mark Project 10 complete and link to its directory. Preserve existing project entries.
+
+Record this Project 10 prompt in `part-2-data-science-examples/PROMPTS.md`.
+
+Do not modify Part 1. Do not commit or push.
+
+When finished, briefly summarize what was implemented, how it was tested, and how to run it.
+
+## Projects 11-13
 
 Add one section per project using this pattern:
 
