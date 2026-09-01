@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SegmentLab | Customer Intelligence</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <aside>
+    <div class="brand"><span>SL</span><strong>SegmentLab</strong></div>
+    <nav><a class="active">Overview</a><a href="#segments">Segments</a><a href="#research">Autoresearch</a><a href="#governance">Governance</a></nav>
+    <div class="status"><i></i> Model artifacts ready</div>
+  </aside>
+  <main>
+    <header><div><p class="eyebrow">CUSTOMER INTELLIGENCE / MODEL OPS</p><h1>Segmentation command center</h1><p>Research-grade cluster validation, translated into marketing actions.</p></div>
+      <label>Audience filter<select id="gender"><option>All</option><option>Female</option><option>Male</option></select></label></header>
+    <section class="cards" id="cards"></section>
+    <section class="grid">
+      <article class="wide"><div class="heading"><div><p class="eyebrow">CUSTOMER MAP</p><h2>Income × spending behavior</h2></div><span class="legend">● each point is one customer</span></div><svg id="scatter" viewBox="0 0 780 380" role="img" aria-label="Income and spending cluster scatterplot"></svg></article>
+      <article><p class="eyebrow">PORTFOLIO MIX</p><h2>Segment share</h2><div id="mix" class="bars"></div></article>
+    </section>
+    <section class="grid" id="research">
+      <article><p class="eyebrow">AUTORESEARCH</p><h2>Top experiments</h2><div class="table-wrap"><table><thead><tr><th>Rank</th><th>Model</th><th>k</th><th>Score</th></tr></thead><tbody id="experiments"></tbody></table></div></article>
+      <article class="wide"><p class="eyebrow">DECISION SUPPORT</p><h2>Segment playbook</h2><div class="table-wrap"><table><thead><tr><th>Segment</th><th>Customers</th><th>Age</th><th>Income</th><th>Spend</th><th>Silhouette</th><th>Suggested action</th></tr></thead><tbody id="profiles"></tbody></table></div></article>
+    </section>
+    <section class="governance" id="governance"><div><p class="eyebrow">GOVERNANCE</p><h2>Deployment readiness</h2></div><p><strong>Snapshot:</strong> bundled 200-row Kaggle dataset · <strong>PII:</strong> none · <strong>Refresh:</strong> retrain on new reviewed CSV · <strong>Guardrail:</strong> segment names are descriptive hypotheses, not causal claims.</p></section>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>

@@ -7,7 +7,7 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [00 - Dynamic Todo Workspace](00_dynamic_todo_workspace/) | Dynamic workspace application | Complete |
 | [01 - NYC Taxi Trip Prediction](01_nyc_taxi_trip_prediction/) | Trip-duration prediction | Complete |
 | [02 - Nano LLM Transformer](02_nano_llm_transformer/) | Transformer and language-model fundamentals | Complete |
-| 03 - Customer Segmentation Clustering | Unsupervised customer segmentation | Not started |
+| [03 - Customer Segmentation Clustering](03_customer_segmentation_clustering/) | Unsupervised customer segmentation | Complete |
 | 04 - Associative Pattern Mining | Association rules and frequent patterns | Not started |
 | 05 - Data Science Skills Lab | Applied data science skills | Not started |
 | 06 - Anomaly Detection | Outlier and anomaly detection | Not started |

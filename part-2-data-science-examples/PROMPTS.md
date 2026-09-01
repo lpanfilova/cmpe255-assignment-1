@@ -35,7 +35,17 @@ Keep the model small and practical to train locally. Do not redesign the project
 After fixing it, test several prompts and show the resulting generations so we can verify that the output is noticeably more coherent.
 Do not commit or push.
 
-## Projects 03-13
+## Project 03: Customer Segmentation Clustering
+
+### Prompt
+
+Work in `part-2-data-science-examples/03_customer_segmentation_clustering`.
+
+Build a clustering project using a popular Kaggle dataset. Follow the CRISP-DM framework and include a polished data science administration dashboard. Research relevant papers and implement a practical autoresearch hill-climbing loop, aligning dashboard metrics with the research. Include the details a data scientist and AI engineer would care about.
+
+Keep the project reasonably scoped and runnable locally, using a manageable dataset or sample if needed. Add a concise README with setup/run instructions and key results. Test the clustering pipeline and dashboard. Update the Part 2 README to mark Project 03 complete and link its directory while preserving existing entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
+
+## Projects 04-13
 
 Add one section per project using this pattern:
 

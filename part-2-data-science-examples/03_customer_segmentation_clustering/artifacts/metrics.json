@@ -1,0 +1,584 @@
+{
+  "dataset": {
+    "rows": 200,
+    "features": [
+      "Age",
+      "Annual Income (k$)",
+      "Spending Score (1-100)"
+    ],
+    "missing": 0,
+    "duplicates": 0,
+    "source": "Kaggle Mall Customers (bundled CSV)"
+  },
+  "winner": {
+    "algorithm": "kmeans",
+    "clusters": 6,
+    "scaler": "standard",
+    "silhouette": 0.428417,
+    "davies_bouldin": 0.825354,
+    "calinski_harabasz": 135.102104,
+    "stability_ari": 0.972809,
+    "objective": 0.534845
+  },
+  "hill_climb_path": [
+    {
+      "algorithm": "kmeans",
+      "clusters": 2,
+      "scaler": "standard",
+      "silhouette": 0.33547192894004574,
+      "davies_bouldin": 1.2606822880201844,
+      "calinski_harabasz": 107.09556673899093,
+      "stability_ari": 0.9183617644620187,
+      "objective": 0.4429020640777225
+    }
+  ],
+  "experiments": [
+    {
+      "algorithm": "kmeans",
+      "clusters": 6,
+      "scaler": "standard",
+      "silhouette": 0.428417,
+      "davies_bouldin": 0.825354,
+      "calinski_harabasz": 135.102104,
+      "stability_ari": 0.972809,
+      "objective": 0.534845
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 6,
+      "scaler": "robust",
+      "silhouette": 0.427646,
+      "davies_bouldin": 0.828288,
+      "calinski_harabasz": 134.60226,
+      "stability_ari": 0.964891,
+      "objective": 0.531503
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 4,
+      "scaler": "standard",
+      "silhouette": 0.403958,
+      "davies_bouldin": 0.930796,
+      "calinski_harabasz": 125.676397,
+      "stability_ari": 0.971147,
+      "objective": 0.515539
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 4,
+      "scaler": "robust",
+      "silhouette": 0.40531,
+      "davies_bouldin": 0.922416,
+      "calinski_harabasz": 125.21607,
+      "stability_ari": 0.964461,
+      "objective": 0.514361
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 7,
+      "scaler": "standard",
+      "silhouette": 0.417232,
+      "davies_bouldin": 0.793467,
+      "calinski_harabasz": 132.774309,
+      "stability_ari": 0.886457,
+      "objective": 0.500064
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 7,
+      "scaler": "robust",
+      "silhouette": 0.420595,
+      "davies_bouldin": 0.786636,
+      "calinski_harabasz": 131.863883,
+      "stability_ari": 0.878069,
+      "objective": 0.49932
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 9,
+      "scaler": "standard",
+      "silhouette": 0.417693,
+      "davies_bouldin": 0.819844,
+      "calinski_harabasz": 130.00356,
+      "stability_ari": 0.885738,
+      "objective": 0.498747
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 6,
+      "scaler": "robust",
+      "silhouette": 0.419737,
+      "davies_bouldin": 0.850076,
+      "calinski_harabasz": 121.879495,
+      "stability_ari": 0.884703,
+      "objective": 0.497998
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 8,
+      "scaler": "robust",
+      "silhouette": 0.40719,
+      "davies_bouldin": 0.893285,
+      "calinski_harabasz": 129.662694,
+      "stability_ari": 0.903513,
+      "objective": 0.49552
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 5,
+      "scaler": "robust",
+      "silhouette": 0.414995,
+      "davies_bouldin": 0.874163,
+      "calinski_harabasz": 124.13882,
+      "stability_ari": 0.883246,
+      "objective": 0.493675
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 5,
+      "scaler": "standard",
+      "silhouette": 0.416643,
+      "davies_bouldin": 0.874551,
+      "calinski_harabasz": 125.10094,
+      "stability_ari": 0.870739,
+      "objective": 0.490185
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 9,
+      "scaler": "robust",
+      "silhouette": 0.406893,
+      "davies_bouldin": 0.785025,
+      "calinski_harabasz": 124.093193,
+      "stability_ari": 0.870043,
+      "objective": 0.489055
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 8,
+      "scaler": "standard",
+      "silhouette": 0.408207,
+      "davies_bouldin": 0.891783,
+      "calinski_harabasz": 131.006216,
+      "stability_ari": 0.88124,
+      "objective": 0.488359
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 8,
+      "scaler": "robust",
+      "silhouette": 0.421373,
+      "davies_bouldin": 0.803109,
+      "calinski_harabasz": 123.081365,
+      "stability_ari": 0.834969,
+      "objective": 0.483839
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 5,
+      "scaler": "robust",
+      "silhouette": 0.398226,
+      "davies_bouldin": 0.933147,
+      "calinski_harabasz": 106.460723,
+      "stability_ari": 0.881961,
+      "objective": 0.481054
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 6,
+      "scaler": "standard",
+      "silhouette": 0.420117,
+      "davies_bouldin": 0.852102,
+      "calinski_harabasz": 127.986454,
+      "stability_ari": 0.803402,
+      "objective": 0.46965
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 7,
+      "scaler": "standard",
+      "silhouette": 0.398295,
+      "davies_bouldin": 0.851329,
+      "calinski_harabasz": 120.686805,
+      "stability_ari": 0.834314,
+      "objective": 0.468505
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 5,
+      "scaler": "standard",
+      "silhouette": 0.406367,
+      "davies_bouldin": 0.935599,
+      "calinski_harabasz": 116.900931,
+      "stability_ari": 0.825007,
+      "objective": 0.465475
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 4,
+      "scaler": "robust",
+      "silhouette": 0.370851,
+      "davies_bouldin": 0.996151,
+      "calinski_harabasz": 102.059662,
+      "stability_ari": 0.881968,
+      "objective": 0.462849
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 7,
+      "scaler": "robust",
+      "silhouette": 0.408696,
+      "davies_bouldin": 0.830305,
+      "calinski_harabasz": 125.116874,
+      "stability_ari": 0.797514,
+      "objective": 0.462398
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 9,
+      "scaler": "robust",
+      "silhouette": 0.390913,
+      "davies_bouldin": 0.922427,
+      "calinski_harabasz": 129.08001,
+      "stability_ari": 0.825527,
+      "objective": 0.457815
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 9,
+      "scaler": "standard",
+      "silhouette": 0.375385,
+      "davies_bouldin": 0.858235,
+      "calinski_harabasz": 117.475123,
+      "stability_ari": 0.82937,
+      "objective": 0.45383
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 5,
+      "scaler": "standard",
+      "silhouette": 0.390028,
+      "davies_bouldin": 0.916289,
+      "calinski_harabasz": 107.82656,
+      "stability_ari": 0.802202,
+      "objective": 0.449472
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 7,
+      "scaler": "standard",
+      "silhouette": 0.389701,
+      "davies_bouldin": 0.812987,
+      "calinski_harabasz": 119.132388,
+      "stability_ari": 0.787149,
+      "objective": 0.449189
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 6,
+      "scaler": "standard",
+      "silhouette": 0.414608,
+      "davies_bouldin": 0.846275,
+      "calinski_harabasz": 123.88166,
+      "stability_ari": 0.746764,
+      "objective": 0.447088
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 6,
+      "scaler": "robust",
+      "silhouette": 0.412759,
+      "davies_bouldin": 0.843876,
+      "calinski_harabasz": 123.26801,
+      "stability_ari": 0.743493,
+      "objective": 0.445046
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 2,
+      "scaler": "standard",
+      "silhouette": 0.335472,
+      "davies_bouldin": 1.260682,
+      "calinski_harabasz": 107.095567,
+      "stability_ari": 0.918362,
+      "objective": 0.442902
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 2,
+      "scaler": "robust",
+      "silhouette": 0.327854,
+      "davies_bouldin": 1.292601,
+      "calinski_harabasz": 101.336066,
+      "stability_ari": 0.928946,
+      "objective": 0.440821
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 4,
+      "scaler": "robust",
+      "silhouette": 0.37449,
+      "davies_bouldin": 0.987303,
+      "calinski_harabasz": 106.655367,
+      "stability_ari": 0.808686,
+      "objective": 0.439645
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 8,
+      "scaler": "standard",
+      "silhouette": 0.366479,
+      "davies_bouldin": 0.841587,
+      "calinski_harabasz": 118.066796,
+      "stability_ari": 0.795266,
+      "objective": 0.437827
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 4,
+      "scaler": "standard",
+      "silhouette": 0.361451,
+      "davies_bouldin": 1.016382,
+      "calinski_harabasz": 102.019399,
+      "stability_ari": 0.815953,
+      "objective": 0.433563
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 4,
+      "scaler": "standard",
+      "silhouette": 0.373447,
+      "davies_bouldin": 0.994616,
+      "calinski_harabasz": 107.148493,
+      "stability_ari": 0.787072,
+      "objective": 0.43114
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 7,
+      "scaler": "robust",
+      "silhouette": 0.38792,
+      "davies_bouldin": 0.812419,
+      "calinski_harabasz": 118.17555,
+      "stability_ari": 0.737106,
+      "objective": 0.430722
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 2,
+      "scaler": "standard",
+      "silhouette": 0.328788,
+      "davies_bouldin": 1.264648,
+      "calinski_harabasz": 104.897174,
+      "stability_ari": 0.869511,
+      "objective": 0.42193
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 5,
+      "scaler": "robust",
+      "silhouette": 0.376817,
+      "davies_bouldin": 0.883121,
+      "calinski_harabasz": 104.949643,
+      "stability_ari": 0.72904,
+      "objective": 0.418257
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 2,
+      "scaler": "robust",
+      "silhouette": 0.320876,
+      "davies_bouldin": 1.298631,
+      "calinski_harabasz": 99.044449,
+      "stability_ari": 0.869511,
+      "objective": 0.415879
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 3,
+      "scaler": "standard",
+      "silhouette": 0.334782,
+      "davies_bouldin": 1.019101,
+      "calinski_harabasz": 90.864079,
+      "stability_ari": 0.801224,
+      "objective": 0.413603
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 3,
+      "scaler": "standard",
+      "silhouette": 0.357793,
+      "davies_bouldin": 1.05027,
+      "calinski_harabasz": 101.694947,
+      "stability_ari": 0.755452,
+      "objective": 0.408681
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 2,
+      "scaler": "robust",
+      "silhouette": 0.315071,
+      "davies_bouldin": 1.32532,
+      "calinski_harabasz": 95.259769,
+      "stability_ari": 0.857799,
+      "objective": 0.407253
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 8,
+      "scaler": "robust",
+      "silhouette": 0.363486,
+      "davies_bouldin": 0.945708,
+      "calinski_harabasz": 94.663202,
+      "stability_ari": 0.702959,
+      "objective": 0.398668
+    },
+    {
+      "algorithm": "kmeans",
+      "clusters": 3,
+      "scaler": "robust",
+      "silhouette": 0.355172,
+      "davies_bouldin": 1.061494,
+      "calinski_harabasz": 100.838478,
+      "stability_ari": 0.711194,
+      "objective": 0.391188
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 9,
+      "scaler": "standard",
+      "silhouette": 0.3584,
+      "davies_bouldin": 1.032915,
+      "calinski_harabasz": 106.063847,
+      "stability_ari": 0.693422,
+      "objective": 0.388172
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 2,
+      "scaler": "standard",
+      "silhouette": 0.317957,
+      "davies_bouldin": 1.308296,
+      "calinski_harabasz": 99.000668,
+      "stability_ari": 0.774549,
+      "objective": 0.380554
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 8,
+      "scaler": "standard",
+      "silhouette": 0.3486,
+      "davies_bouldin": 1.16052,
+      "calinski_harabasz": 102.601759,
+      "stability_ari": 0.683968,
+      "objective": 0.373093
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 9,
+      "scaler": "robust",
+      "silhouette": 0.365545,
+      "davies_bouldin": 0.959914,
+      "calinski_harabasz": 93.430311,
+      "stability_ari": 0.626526,
+      "objective": 0.372338
+    },
+    {
+      "algorithm": "gmm",
+      "clusters": 3,
+      "scaler": "robust",
+      "silhouette": 0.331008,
+      "davies_bouldin": 1.029309,
+      "calinski_harabasz": 88.432822,
+      "stability_ari": 0.649768,
+      "objective": 0.358008
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 3,
+      "scaler": "robust",
+      "silhouette": 0.335297,
+      "davies_bouldin": 1.066071,
+      "calinski_harabasz": 87.723047,
+      "stability_ari": 0.457728,
+      "objective": 0.291315
+    },
+    {
+      "algorithm": "agglomerative",
+      "clusters": 3,
+      "scaler": "standard",
+      "silhouette": 0.321489,
+      "davies_bouldin": 1.127729,
+      "calinski_harabasz": 88.101741,
+      "stability_ari": 0.425618,
+      "objective": 0.269399
+    }
+  ],
+  "profiles": [
+    {
+      "cluster": 0,
+      "customers": 45,
+      "age": 56.333,
+      "income": 54.267,
+      "spending": 49.067,
+      "silhouette": 0.491,
+      "female_share": 0.578,
+      "segment": "Mainstream shoppers"
+    },
+    {
+      "cluster": 1,
+      "customers": 39,
+      "age": 26.795,
+      "income": 57.103,
+      "spending": 48.128,
+      "silhouette": 0.387,
+      "female_share": 0.641,
+      "segment": "Mainstream shoppers"
+    },
+    {
+      "cluster": 2,
+      "customers": 33,
+      "age": 41.939,
+      "income": 88.939,
+      "spending": 16.97,
+      "silhouette": 0.331,
+      "female_share": 0.424,
+      "segment": "Affluent cautious"
+    },
+    {
+      "cluster": 3,
+      "customers": 39,
+      "age": 32.692,
+      "income": 86.538,
+      "spending": 82.128,
+      "silhouette": 0.505,
+      "female_share": 0.538,
+      "segment": "Premium champions"
+    },
+    {
+      "cluster": 4,
+      "customers": 23,
+      "age": 25.0,
+      "income": 25.261,
+      "spending": 77.609,
+      "silhouette": 0.508,
+      "female_share": 0.565,
+      "segment": "Emerging enthusiasts"
+    },
+    {
+      "cluster": 5,
+      "customers": 21,
+      "age": 45.524,
+      "income": 26.286,
+      "spending": 19.381,
+      "silhouette": 0.294,
+      "female_share": 0.619,
+      "segment": "Budget minimalists"
+    }
+  ],
+  "methodology": {
+    "seed": 42,
+    "stability_rounds": 3,
+    "objective": "0.55*silhouette + 0.35*bootstrap ARI - 0.10*min(DB,2)/2"
+  }
+}
