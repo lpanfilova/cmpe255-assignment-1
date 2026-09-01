@@ -8,7 +8,7 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [01 - NYC Taxi Trip Prediction](01_nyc_taxi_trip_prediction/) | Trip-duration prediction | Complete |
 | [02 - Nano LLM Transformer](02_nano_llm_transformer/) | Transformer and language-model fundamentals | Complete |
 | [03 - Customer Segmentation Clustering](03_customer_segmentation_clustering/) | Unsupervised customer segmentation | Complete |
-| 04 - Associative Pattern Mining | Association rules and frequent patterns | Not started |
+| [04 - Associative Pattern Mining](04_associative_pattern_mining/) | Association rules and frequent patterns | Complete |
 | 05 - Data Science Skills Lab | Applied data science skills | Not started |
 | 06 - Anomaly Detection | Outlier and anomaly detection | Not started |
 | 07 - AutoML AutoGluon | Automated machine learning with AutoGluon | Not started |

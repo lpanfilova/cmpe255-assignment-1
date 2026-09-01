@@ -45,7 +45,17 @@ Build a clustering project using a popular Kaggle dataset. Follow the CRISP-DM f
 
 Keep the project reasonably scoped and runnable locally, using a manageable dataset or sample if needed. Add a concise README with setup/run instructions and key results. Test the clustering pipeline and dashboard. Update the Part 2 README to mark Project 03 complete and link its directory while preserving existing entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
 
-## Projects 04-13
+## Project 04: Associative Pattern Mining
+
+### Prompt
+
+Work in `part-2-data-science-examples/04_associative_pattern_mining`.
+
+Build an associative pattern-mining project using a popular Kaggle dataset. Follow the CRISP-DM framework and include a polished data science administration dashboard. Research relevant papers and implement a practical autoresearch hill-climbing loop, aligning dashboard details with the research. Include the details a data scientist and AI engineer would care about.
+
+Keep the project reasonably scoped and runnable locally, using a manageable dataset or sample if needed. Add a concise README with setup/run instructions and key results. Test the association/pattern-mining pipeline and dashboard. Update the Part 2 README to mark Project 04 complete and link its directory while preserving existing entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1. Do not commit or push.
+
+## Projects 05-13
 
 Add one section per project using this pattern:
 

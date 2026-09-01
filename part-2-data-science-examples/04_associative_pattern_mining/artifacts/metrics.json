@@ -1,0 +1,639 @@
+{
+  "dataset": {
+    "rows": 38006,
+    "baskets": 14963,
+    "items": 167,
+    "average_basket_size": 2.54,
+    "duplicate_member_day_items_removed": true
+  },
+  "winner": {
+    "objective": 0.298225,
+    "rule_count": 189,
+    "mean_lift": 1.181279,
+    "mean_confidence": 0.066215,
+    "opportunity_coverage": 0.159986,
+    "catalog_coverage": 0.407186,
+    "config": {
+      "min_support": 0.001,
+      "min_confidence": 0.02,
+      "min_lift": 1.0,
+      "max_len": 3
+    }
+  },
+  "research": {
+    "method": "deterministic coordinate hill climbing",
+    "path": [
+      {
+        "iteration": 0,
+        "objective": 0.117481,
+        "rule_count": 3,
+        "mean_lift": 1.111374,
+        "mean_confidence": 0.099482,
+        "opportunity_coverage": 0.008321,
+        "catalog_coverage": 0.023952,
+        "config": {
+          "min_support": 0.005,
+          "min_confidence": 0.06,
+          "min_lift": 1.1,
+          "max_len": 2
+        }
+      },
+      {
+        "iteration": 1,
+        "objective": 0.127364,
+        "rule_count": 5,
+        "mean_lift": 1.200547,
+        "mean_confidence": 0.091899,
+        "opportunity_coverage": 0.011463,
+        "catalog_coverage": 0.035928,
+        "config": {
+          "min_support": 0.0025,
+          "min_confidence": 0.06,
+          "min_lift": 1.1,
+          "max_len": 2
+        }
+      },
+      {
+        "iteration": 2,
+        "objective": 0.214591,
+        "rule_count": 36,
+        "mean_lift": 1.307294,
+        "mean_confidence": 0.097135,
+        "opportunity_coverage": 0.03268,
+        "catalog_coverage": 0.251497,
+        "config": {
+          "min_support": 0.001,
+          "min_confidence": 0.06,
+          "min_lift": 1.1,
+          "max_len": 2
+        }
+      },
+      {
+        "iteration": 3,
+        "objective": 0.267248,
+        "rule_count": 67,
+        "mean_lift": 1.265801,
+        "mean_confidence": 0.073592,
+        "opportunity_coverage": 0.05794,
+        "catalog_coverage": 0.353293,
+        "config": {
+          "min_support": 0.001,
+          "min_confidence": 0.04,
+          "min_lift": 1.1,
+          "max_len": 2
+        }
+      },
+      {
+        "iteration": 4,
+        "objective": 0.28354,
+        "rule_count": 79,
+        "mean_lift": 1.286514,
+        "mean_confidence": 0.084026,
+        "opportunity_coverage": 0.065257,
+        "catalog_coverage": 0.353293,
+        "config": {
+          "min_support": 0.001,
+          "min_confidence": 0.04,
+          "min_lift": 1.1,
+          "max_len": 3
+        }
+      },
+      {
+        "iteration": 5,
+        "objective": 0.286312,
+        "rule_count": 98,
+        "mean_lift": 1.245127,
+        "mean_confidence": 0.082383,
+        "opportunity_coverage": 0.078723,
+        "catalog_coverage": 0.377246,
+        "config": {
+          "min_support": 0.001,
+          "min_confidence": 0.04,
+          "min_lift": 1.05,
+          "max_len": 3
+        }
+      },
+      {
+        "iteration": 6,
+        "objective": 0.294287,
+        "rule_count": 128,
+        "mean_lift": 1.192869,
+        "mean_confidence": 0.082725,
+        "opportunity_coverage": 0.115314,
+        "catalog_coverage": 0.407186,
+        "config": {
+          "min_support": 0.001,
+          "min_confidence": 0.04,
+          "min_lift": 1.0,
+          "max_len": 3
+        }
+      },
+      {
+        "iteration": 7,
+        "objective": 0.298225,
+        "rule_count": 189,
+        "mean_lift": 1.181279,
+        "mean_confidence": 0.066215,
+        "opportunity_coverage": 0.159986,
+        "catalog_coverage": 0.407186,
+        "config": {
+          "min_support": 0.001,
+          "min_confidence": 0.02,
+          "min_lift": 1.0,
+          "max_len": 3
+        }
+      }
+    ],
+    "evaluated_configurations": 250,
+    "audit_space": 250,
+    "global_best_objective": 0.298225,
+    "global_optimum_reached": true
+  },
+  "top_items": [
+    {
+      "item": "whole milk",
+      "baskets": 2363,
+      "support": 0.157923
+    },
+    {
+      "item": "other vegetables",
+      "baskets": 1827,
+      "support": 0.122101
+    },
+    {
+      "item": "rolls/buns",
+      "baskets": 1646,
+      "support": 0.110005
+    },
+    {
+      "item": "soda",
+      "baskets": 1453,
+      "support": 0.097106
+    },
+    {
+      "item": "yogurt",
+      "baskets": 1285,
+      "support": 0.085879
+    },
+    {
+      "item": "root vegetables",
+      "baskets": 1041,
+      "support": 0.069572
+    },
+    {
+      "item": "tropical fruit",
+      "baskets": 1014,
+      "support": 0.067767
+    },
+    {
+      "item": "bottled water",
+      "baskets": 908,
+      "support": 0.060683
+    },
+    {
+      "item": "sausage",
+      "baskets": 903,
+      "support": 0.060349
+    },
+    {
+      "item": "citrus fruit",
+      "baskets": 795,
+      "support": 0.053131
+    },
+    {
+      "item": "pastry",
+      "baskets": 774,
+      "support": 0.051728
+    },
+    {
+      "item": "pip fruit",
+      "baskets": 734,
+      "support": 0.049054
+    }
+  ],
+  "experiments": [
+    {
+      "objective": 0.298225,
+      "rule_count": 189,
+      "mean_lift": 1.181279,
+      "mean_confidence": 0.066215,
+      "opportunity_coverage": 0.159986,
+      "catalog_coverage": 0.407186,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.0,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.294287,
+      "rule_count": 128,
+      "mean_lift": 1.192869,
+      "mean_confidence": 0.082725,
+      "opportunity_coverage": 0.115314,
+      "catalog_coverage": 0.407186,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.0,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.293222,
+      "rule_count": 173,
+      "mean_lift": 1.161943,
+      "mean_confidence": 0.059971,
+      "opportunity_coverage": 0.150029,
+      "catalog_coverage": 0.407186,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.0,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.289068,
+      "rule_count": 113,
+      "mean_lift": 1.173667,
+      "mean_confidence": 0.074987,
+      "opportunity_coverage": 0.106092,
+      "catalog_coverage": 0.407186,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.0,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.287505,
+      "rule_count": 143,
+      "mean_lift": 1.232764,
+      "mean_confidence": 0.06614,
+      "opportunity_coverage": 0.10963,
+      "catalog_coverage": 0.377246,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.05,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.286312,
+      "rule_count": 98,
+      "mean_lift": 1.245127,
+      "mean_confidence": 0.082383,
+      "opportunity_coverage": 0.078723,
+      "catalog_coverage": 0.377246,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.05,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.28354,
+      "rule_count": 79,
+      "mean_lift": 1.286514,
+      "mean_confidence": 0.084026,
+      "opportunity_coverage": 0.065257,
+      "catalog_coverage": 0.353293,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.1,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.283424,
+      "rule_count": 110,
+      "mean_lift": 1.281221,
+      "mean_confidence": 0.068978,
+      "opportunity_coverage": 0.085471,
+      "catalog_coverage": 0.353293,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.1,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.281896,
+      "rule_count": 127,
+      "mean_lift": 1.21291,
+      "mean_confidence": 0.057625,
+      "opportunity_coverage": 0.099673,
+      "catalog_coverage": 0.377246,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.05,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.281561,
+      "rule_count": 78,
+      "mean_lift": 1.218213,
+      "mean_confidence": 0.105353,
+      "opportunity_coverage": 0.072276,
+      "catalog_coverage": 0.329341,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.06,
+        "min_lift": 1.0,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.280566,
+      "rule_count": 83,
+      "mean_lift": 1.22843,
+      "mean_confidence": 0.071786,
+      "opportunity_coverage": 0.069501,
+      "catalog_coverage": 0.377246,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.05,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.277843,
+      "rule_count": 97,
+      "mean_lift": 1.256964,
+      "mean_confidence": 0.06037,
+      "opportunity_coverage": 0.077419,
+      "catalog_coverage": 0.353293,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.1,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.267248,
+      "rule_count": 67,
+      "mean_lift": 1.265801,
+      "mean_confidence": 0.073592,
+      "opportunity_coverage": 0.05794,
+      "catalog_coverage": 0.353293,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.1,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.260643,
+      "rule_count": 66,
+      "mean_lift": 1.374636,
+      "mean_confidence": 0.073619,
+      "opportunity_coverage": 0.049117,
+      "catalog_coverage": 0.275449,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.2,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.259463,
+      "rule_count": 63,
+      "mean_lift": 1.189807,
+      "mean_confidence": 0.09686,
+      "opportunity_coverage": 0.063054,
+      "catalog_coverage": 0.329341,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.06,
+        "min_lift": 1.0,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.250419,
+      "rule_count": 58,
+      "mean_lift": 1.286241,
+      "mean_confidence": 0.107024,
+      "opportunity_coverage": 0.047214,
+      "catalog_coverage": 0.269461,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.06,
+        "min_lift": 1.05,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.242892,
+      "rule_count": 58,
+      "mean_lift": 1.334168,
+      "mean_confidence": 0.065131,
+      "opportunity_coverage": 0.043972,
+      "catalog_coverage": 0.269461,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.2,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.241101,
+      "rule_count": 51,
+      "mean_lift": 1.365745,
+      "mean_confidence": 0.086485,
+      "opportunity_coverage": 0.038659,
+      "catalog_coverage": 0.275449,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.2,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.240034,
+      "rule_count": 54,
+      "mean_lift": 1.241073,
+      "mean_confidence": 0.121202,
+      "opportunity_coverage": 0.048116,
+      "catalog_coverage": 0.233533,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.08,
+        "min_lift": 1.0,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.236655,
+      "rule_count": 48,
+      "mean_lift": 1.33101,
+      "mean_confidence": 0.108421,
+      "opportunity_coverage": 0.039997,
+      "catalog_coverage": 0.251497,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.06,
+        "min_lift": 1.1,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.224693,
+      "rule_count": 44,
+      "mean_lift": 1.329357,
+      "mean_confidence": 0.076223,
+      "opportunity_coverage": 0.034249,
+      "catalog_coverage": 0.269461,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.2,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.224269,
+      "rule_count": 43,
+      "mean_lift": 1.268354,
+      "mean_confidence": 0.095165,
+      "opportunity_coverage": 0.037992,
+      "catalog_coverage": 0.269461,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.06,
+        "min_lift": 1.05,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.215265,
+      "rule_count": 40,
+      "mean_lift": 1.318107,
+      "mean_confidence": 0.123083,
+      "opportunity_coverage": 0.031275,
+      "catalog_coverage": 0.173653,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.08,
+        "min_lift": 1.05,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.215106,
+      "rule_count": 34,
+      "mean_lift": 1.411645,
+      "mean_confidence": 0.106717,
+      "opportunity_coverage": 0.024425,
+      "catalog_coverage": 0.215569,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.06,
+        "min_lift": 1.2,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.214591,
+      "rule_count": 36,
+      "mean_lift": 1.307294,
+      "mean_confidence": 0.097135,
+      "opportunity_coverage": 0.03268,
+      "catalog_coverage": 0.251497,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.06,
+        "min_lift": 1.1,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.213502,
+      "rule_count": 39,
+      "mean_lift": 1.203978,
+      "mean_confidence": 0.113579,
+      "opportunity_coverage": 0.038894,
+      "catalog_coverage": 0.233533,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.08,
+        "min_lift": 1.0,
+        "max_len": 2
+      }
+    },
+    {
+      "objective": 0.212565,
+      "rule_count": 35,
+      "mean_lift": 1.493459,
+      "mean_confidence": 0.083116,
+      "opportunity_coverage": 0.026329,
+      "catalog_coverage": 0.185629,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.02,
+        "min_lift": 1.3,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.209343,
+      "rule_count": 35,
+      "mean_lift": 1.352821,
+      "mean_confidence": 0.122289,
+      "opportunity_coverage": 0.027465,
+      "catalog_coverage": 0.167665,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.08,
+        "min_lift": 1.1,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.209265,
+      "rule_count": 37,
+      "mean_lift": 1.23848,
+      "mean_confidence": 0.136205,
+      "opportunity_coverage": 0.03024,
+      "catalog_coverage": 0.179641,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.1,
+        "min_lift": 1.0,
+        "max_len": 3
+      }
+    },
+    {
+      "objective": 0.203435,
+      "rule_count": 27,
+      "mean_lift": 1.475081,
+      "mean_confidence": 0.099372,
+      "opportunity_coverage": 0.020583,
+      "catalog_coverage": 0.185629,
+      "config": {
+        "min_support": 0.001,
+        "min_confidence": 0.04,
+        "min_lift": 1.3,
+        "max_len": 3
+      }
+    }
+  ],
+  "runtime_seconds": 1.359,
+  "seed": 42,
+  "data_source": "Kaggle Groceries dataset; grouped by Member_number + Date"
+}
