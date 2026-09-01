@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlowForge · Local DAG Studio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <div><span class="eyebrow">Local DAG Studio</span><h1>Flow<span>Forge</span></h1></div>
+    <div class="toolbar"><button id="reset" class="ghost">Reset sample</button><button id="validate">Validate</button><button id="save">Save</button><button id="run" class="primary">▶ Run workflow</button></div>
+  </header>
+  <main>
+    <section class="workspace panel">
+      <div class="section-head"><div><label for="workflow-name">Workflow</label><input id="workflow-name" aria-label="Workflow name"></div><div class="add-node"><select id="new-type"><option>source</option><option>filter</option><option>map</option><option>aggregate</option><option>fail</option></select><button id="add-node">+ Node</button></div></div>
+      <div id="notice" class="notice">Ready. Edit, validate, save, then run.</div>
+      <div id="canvas" class="canvas" aria-label="Workflow canvas"></div>
+      <div class="edges"><h2>Dependencies</h2><div class="edge-builder"><select id="edge-source"></select><span>→</span><select id="edge-target"></select><button id="add-edge">Add edge</button></div><ul id="edge-list"></ul></div>
+    </section>
+    <aside class="panel inspector">
+      <span class="eyebrow">Node inspector</span><p id="inspector-empty">Select a node.</p>
+      <div id="inspector-form"><div class="badge" id="node-type"></div><label for="node-id">Node ID</label><input id="node-id" disabled><label for="node-config">Configuration (JSON)</label><textarea id="node-config" rows="12"></textarea><button id="apply-config">Apply configuration</button><button id="delete-node" class="danger">Delete node</button></div>
+    </aside>
+    <section class="panel run-panel"><div class="section-head"><div><span class="eyebrow">Observability</span><h2>Latest Run</h2></div><span class="live">● local engine</span></div><div id="results"><p class="muted">Run the workflow to inspect outcomes.</p></div></section>
+  </main>
+  <script src="{{ url_for('static', filename='graph-utils.js') }}"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
+

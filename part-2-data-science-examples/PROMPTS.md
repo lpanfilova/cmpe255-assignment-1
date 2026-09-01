@@ -109,7 +109,20 @@ Do not modify Part 1. Do not commit or push.
 
 When finished, briefly summarize what was implemented, how it was tested, and how to run it.
 
-## Projects 09-13
+## Project 09: FlowForge DAG Engine
+
+### Prompt
+
+Work in `part-2-data-science-examples/09_flowforge_dag_engine`.
+Install Matt Pocock skills and then demonstrate them with a complicated end-to-end full stack project.
+Keep the project reasonably scoped and runnable locally. Build a clear full-stack demonstration without unnecessary infrastructure or scope expansion.
+Add a concise README with setup/run instructions. Test the important frontend and backend functionality.
+Update `part-2-data-science-examples/README.md` to mark Project 09 complete and link to its directory. Preserve existing project entries.
+Record this Project 09 prompt in `part-2-data-science-examples/PROMPTS.md`.
+Do not modify Part 1. Do not commit or push.
+When finished, briefly summarize what was implemented, how it was tested, and how to run it.
+
+## Projects 10-13
 
 Add one section per project using this pattern:
 

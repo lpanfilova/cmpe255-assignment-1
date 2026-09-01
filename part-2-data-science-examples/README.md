@@ -13,7 +13,7 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [06 - Anomaly Detection](06_anomaly_detection/) | Outlier and anomaly detection | Complete |
 | [07 - AutoML AutoGluon](07_automl_autogluon/) | Automated machine learning with AutoGluon | Complete |
 | [08 - Data Science Visual Mastery](08_datascience_visual_mastery/) | Interactive foundations: Bayes, evaluation, calculus, and backpropagation | Complete |
-| 09 - FlowForge DAG Engine | Workflow orchestration with DAGs | Not started |
+| [09 - FlowForge DAG Engine](09_flowforge_dag_engine/) | Full-stack workflow orchestration with deterministic DAGs | Complete |
 | 10 - CRISP-DM Masters Curriculum | CRISP-DM methodology | Not started |
 | 11 - Enterprise DS Audit | Enterprise data science auditing | Not started |
 | 12 - Time Series Forecasting | Forecasting temporal data | Not started |
