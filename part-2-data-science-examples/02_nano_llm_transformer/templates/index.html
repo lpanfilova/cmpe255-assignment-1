@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nano LLM Lab</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <div><span class="eyebrow">LOCAL TRANSFORMER LAB</span><h1>Nano LLM <i>Control Room</i></h1></div>
+    <div class="status"><span></span> local & private</div>
+  </header>
+  <nav><button class="tab active" data-view="chat">Chat lab</button><button class="tab" data-view="dashboard">Model dashboard</button><button class="tab" data-view="crisp">CRISP-DM</button></nav>
+  <main>
+    <section id="chat" class="view active">
+      <div class="hero"><div><p class="eyebrow">LOCAL TOKEN GENERATION</p><h2>Talk to the model<br><i>you trained.</i></h2><p>This tiny model imitates its educational corpus. It is a learning instrument—not a factual assistant.</p></div><div class="architecture">Word tokens → RoPE attention<br>→ SwiGLU blocks → tokens</div></div>
+      <div class="chat-card">
+        <div id="messages"><div class="message assistant">Try “What is a good experiment?” or “Explain overfitting.”</div></div>
+        <form id="chat-form"><textarea id="prompt" maxlength="1000" placeholder="Ask the nano model…" required></textarea><div class="controls"><label>Temperature <input id="temperature" type="range" min="0.2" max="1.2" step="0.05" value="0.55"><b id="temp-value">0.55</b></label><button type="submit">Generate <span>→</span></button></div></form>
+      </div>
+    </section>
+    <section id="dashboard" class="view">
+      <div class="section-head"><div><p class="eyebrow">TRAINING OBSERVABILITY</p><h2>Model dashboard</h2></div><p id="freshness">Reading artifacts…</p></div>
+      <div id="kpis" class="kpis"></div>
+      <div class="grid"><article><h3>Loss trajectory</h3><p>Train and held-out validation cross-entropy</p><svg id="loss-chart" viewBox="0 0 700 280" role="img" aria-label="Training and validation loss chart"></svg></article><article><h3>Experiment leaderboard</h3><p>Bounded capacity hill climb (when enabled)</p><div id="experiments"></div></article></div>
+      <div class="grid"><article><h3>Model card</h3><dl id="model-card"></dl></article><article><h3>Data & risk card</h3><dl id="data-card"></dl><div class="warning">Small synthetic corpus • no factuality or safety guarantees • research/education only</div></article></div>
+    </section>
+    <section id="crisp" class="view">
+      <div class="section-head"><div><p class="eyebrow">REPRODUCIBLE DELIVERY</p><h2>CRISP-DM lifecycle</h2></div></div>
+      <div class="timeline">
+        <article><b>01</b><h3>Business understanding</h3><p>Teach decoder-only LM fundamentals under laptop constraints; success means reproducible loss reduction and working inference.</p></article>
+        <article><b>02</b><h3>Data understanding</h3><p>Inspect a repository-owned dialogue corpus, UTF-8 byte coverage, train/validation sizes, and representativeness limits.</p></article>
+        <article><b>03</b><h3>Data preparation</h3><p>Fit a local word/punctuation vocabulary, split complete dialogues at 85/15, and sample next-token windows without external downloads.</p></article>
+        <article><b>04</b><h3>Modeling</h3><p>Train a pre-norm causal Transformer with RoPE, SwiGLU, RMSNorm, tied embeddings, AdamW, and cosine decay.</p></article>
+        <article><b>05</b><h3>Evaluation</h3><p>Track held-out loss and perplexity; optional bounded search compares capacity under the same short training budget.</p></article>
+        <article><b>06</b><h3>Deployment</h3><p>Persist config + weights, load lazily in Flask, expose health/metrics/chat APIs, and monitor artifacts here.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer>Built for transparent, laptop-scale language-model learning.</footer>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

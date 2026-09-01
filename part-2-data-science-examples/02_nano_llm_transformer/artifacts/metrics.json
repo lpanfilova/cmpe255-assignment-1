@@ -1,0 +1,128 @@
+{
+  "model": {
+    "vocab_size": 510,
+    "block_size": 64,
+    "n_layer": 2,
+    "n_head": 4,
+    "n_embd": 96,
+    "dropout": 0.05,
+    "bias": false,
+    "parameters": 270624,
+    "checkpoint_mb": 1.0462770462036133
+  },
+  "training": {
+    "device": "cpu",
+    "steps": 1200,
+    "seconds": 49.319646400006604,
+    "tokens_seen": 1228800,
+    "seed": 42,
+    "history": [
+      {
+        "step": 1,
+        "train_loss": 6.185548973083496,
+        "val_loss": 6.172504043579101,
+        "lr": 1e-05,
+        "grad_norm": 1.6720280647277832
+      },
+      {
+        "step": 100,
+        "train_loss": 3.1161705493927,
+        "val_loss": 4.616355514526367,
+        "lr": 0.0004979872021202333,
+        "grad_norm": 1.1419669389724731
+      },
+      {
+        "step": 200,
+        "train_loss": 1.4072601795196533,
+        "val_loss": 4.37584810256958,
+        "lr": 0.0004816166534597869,
+        "grad_norm": 0.8522595167160034
+      },
+      {
+        "step": 300,
+        "train_loss": 0.6528854370117188,
+        "val_loss": 4.530618572235108,
+        "lr": 0.0004499222928205233,
+        "grad_norm": 0.6515985727310181
+      },
+      {
+        "step": 400,
+        "train_loss": 0.3003835558891296,
+        "val_loss": 4.542697715759277,
+        "lr": 0.0004052547459390046,
+        "grad_norm": 0.6167923808097839
+      },
+      {
+        "step": 500,
+        "train_loss": 0.14189416766166688,
+        "val_loss": 4.78906364440918,
+        "lr": 0.00035092680042700283,
+        "grad_norm": 0.4995318651199341
+      },
+      {
+        "step": 600,
+        "train_loss": 0.08504710495471954,
+        "val_loss": 4.933787822723389,
+        "lr": 0.00029096771146933,
+        "grad_norm": 0.4046018123626709
+      },
+      {
+        "step": 700,
+        "train_loss": 0.07374510616064071,
+        "val_loss": 5.2348708152771,
+        "lr": 0.0002298243703993963,
+        "grad_norm": 0.3656544089317322
+      },
+      {
+        "step": 800,
+        "train_loss": 0.05674903690814972,
+        "val_loss": 5.178201389312744,
+        "lr": 0.0001720314991121856,
+        "grad_norm": 0.44395262002944946
+      },
+      {
+        "step": 900,
+        "train_loss": 0.04679428711533547,
+        "val_loss": 5.549304103851318,
+        "lr": 0.00012187533048627616,
+        "grad_norm": 0.39161139726638794
+      },
+      {
+        "step": 1000,
+        "train_loss": 0.04556226208806038,
+        "val_loss": 5.6548206329345705,
+        "lr": 8.307571809944801e-05,
+        "grad_norm": 0.4123353958129883
+      },
+      {
+        "step": 1100,
+        "train_loss": 0.05025300458073616,
+        "val_loss": 5.459978771209717,
+        "lr": 5.851025170601613e-05,
+        "grad_norm": 0.2770286798477173
+      },
+      {
+        "step": 1200,
+        "train_loss": 0.04723772406578064,
+        "val_loss": 5.650072956085205,
+        "lr": 5.000083956885037e-05,
+        "grad_norm": 0.3316257894039154
+      }
+    ]
+  },
+  "data": {
+    "source": "tiny_dialogues.txt",
+    "train_tokens": 1323,
+    "validation_tokens": 239,
+    "tokenizer": "Corpus-fitted words/punctuation (510 tokens)",
+    "split": "Dialogue-boundary 85/15",
+    "license": "Original educational corpus (repository-owned)"
+  },
+  "evaluation": {
+    "final_train_loss": 0.04723772406578064,
+    "final_val_loss": 5.650072956085205,
+    "perplexity": 284.3122073729266,
+    "warning": "Tiny-corpus validation loss measures imitation, not general intelligence or factual accuracy."
+  },
+  "experiments": []
+}

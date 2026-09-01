@@ -16,7 +16,26 @@ Do not modify Part 1. Do not commit or push.
 
 Work in `part-2-data-science-examples/01_nyc_taxi_trip_prediction`. Build an end-to-end data science project inspired by the Kaggle NYC taxi challenge, including data, training, deployment, the CRISP-DM framework, and an excellent frontend with an interactive map and trip estimation. Keep it reasonably scoped and runnable locally, using a manageable sample rather than excessive training or tuning. Add concise setup/run instructions and main results, and test the important functionality. Update the Part 2 index to mark Project 01 complete while preserving all other entries. Do not modify Part 1, commit, or push.
 
-## Projects 02-13
+## Project 02: Nano LLM Transformer
+
+### Prompt
+
+Work in `part-2-data-science-examples/02_nano_llm_transformer`.
+
+Build a simple LLM and chatbot using state-of-the-art primitives, but small enough to train and run on a normal laptop GPU. Follow the CRISP-DM framework and include a nice data science admin dashboard. You may research relevant papers and implement lightweight experimentation/hill climbing where practical. Include the details a data scientist and AI engineer would care about.
+
+Keep training and experimentation reasonably small so the project can be reproduced locally without excessive compute or time. A small representative dataset and compact transformer are sufficient.
+
+Add a concise README with setup, training, and run instructions. Test that training runs successfully, a saved model can be loaded, the chatbot produces generated text, and the dashboard/app starts. Update the Part 2 index to mark Project 02 complete and link its directory while preserving existing project entries. Record this prompt in `PROMPTS.md`. Do not modify Part 1, commit, or push.
+
+### Prompt 2
+
+NanoLlama is still giving mostly garbage output. Do a clean audit of the existing implementation, diagnose the training and generation pipeline, fix any bugs, and retrain with better synthetic or sample data if needed.
+Keep the model small and practical to train locally. Do not redesign the project or expand scope unnecessarily.
+After fixing it, test several prompts and show the resulting generations so we can verify that the output is noticeably more coherent.
+Do not commit or push.
+
+## Projects 03-13
 
 Add one section per project using this pattern:
 

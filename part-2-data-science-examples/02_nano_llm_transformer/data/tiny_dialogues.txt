@@ -1,0 +1,120 @@
+User: What is machine learning?
+Assistant: Machine learning finds useful patterns from examples. A good workflow separates training data from held-out evaluation data.
+
+User: What is a language model?
+Assistant: A language model estimates which token is likely to come next. Repeating that prediction generates text one token at a time.
+
+User: Explain a transformer simply.
+Assistant: A transformer mixes information with attention, transforms it with feed-forward layers, and repeats those operations in residual blocks.
+
+User: What does attention do?
+Assistant: Attention lets each token weigh earlier tokens when building its representation. In a causal model, future tokens remain hidden.
+
+User: Why keep validation data?
+Assistant: Validation data estimates performance on examples the optimizer did not directly fit. A widening train-validation gap can indicate overfitting.
+
+User: What is a good experiment?
+Assistant: Change one meaningful factor, keep the budget and evaluation consistent, record the seed, and compare held-out results.
+
+User: Explain overfitting.
+Assistant: Overfitting happens when a model memorizes training details that do not generalize. More representative data or stronger regularization may help.
+
+User: Why use byte tokens?
+Assistant: Bytes need no learned vocabulary and can represent any UTF-8 text. They make this project self-contained, though sequences are longer than subword tokens.
+
+User: What is perplexity?
+Assistant: Perplexity is the exponential of average cross-entropy loss. Lower is better on the same tokenization and evaluation set.
+
+User: What is RoPE?
+Assistant: Rotary position embeddings rotate query and key features by position, giving attention useful relative-position structure.
+
+User: What is RMSNorm?
+Assistant: RMSNorm scales activations using their root-mean-square magnitude. Pre-norm blocks often make transformer optimization stable.
+
+User: What is SwiGLU?
+Assistant: SwiGLU is a gated feed-forward activation. One projection controls another through a smooth SiLU gate.
+
+User: Why use AdamW?
+Assistant: AdamW separates weight decay from adaptive gradient moments. It is a practical optimizer for compact transformer training.
+
+User: How should I read a loss curve?
+Assistant: Look for falling training and validation loss. If validation stalls while training keeps improving, investigate overfitting or data mismatch.
+
+User: Can this model answer facts?
+Assistant: No reliability is promised. This tiny educational model imitates a small corpus and should not be used as a factual or safety-critical assistant.
+
+User: How do I reproduce a result?
+Assistant: Fix seeds, save configuration and metrics, record software versions, preserve the data split, and rerun the same command.
+
+User: What makes a useful dashboard?
+Assistant: Start with decision-relevant outcomes, show trends and diagnostics, define the data source, and make limitations visible.
+
+User: What is data leakage?
+Assistant: Data leakage occurs when training receives information unavailable at prediction time. It can make evaluation look unrealistically strong.
+
+User: Why clip gradients?
+Assistant: Gradient clipping limits unusually large updates. It is a simple guardrail against unstable optimization.
+
+User: What does temperature change?
+Assistant: Lower temperature makes likely tokens more dominant. Higher temperature increases diversity but also increases incoherent choices.
+
+User: What is top-k sampling?
+Assistant: Top-k sampling restricts each choice to the k most likely tokens, then samples among them. It limits the low-probability tail.
+
+User: Why tie embedding weights?
+Assistant: Input-output weight tying reduces parameter count and shares a representation between reading and predicting tokens.
+
+User: Is a small model useful?
+Assistant: A small model is excellent for learning, debugging, and testing an end-to-end system. Its limited capacity and data must remain explicit.
+
+User: Describe CRISP-DM.
+Assistant: CRISP-DM moves through business understanding, data understanding, preparation, modeling, evaluation, and deployment. Iteration connects every phase.
+
+User: What should an AI engineer monitor?
+Assistant: Monitor data freshness, validation loss, latency, resource use, failures, drift, and the limits attached to every evaluation metric.
+
+User: Give concise advice.
+Assistant: Build the smallest honest experiment that can disprove your assumption, measure it, and preserve enough evidence to reproduce it.
+
+User: What is next-token prediction?
+Assistant: The model reads a prefix and assigns probabilities to the next token. Training rewards probability placed on the observed next token.
+
+User: Why use a causal mask?
+Assistant: The causal mask prevents a training token from seeing later answers. Without it, next-token evaluation would leak the future.
+
+User: What is a checkpoint?
+Assistant: A checkpoint stores learned weights plus the configuration needed to reconstruct the model. Metadata makes the artifact auditable.
+
+User: What is model capacity?
+Assistant: Capacity describes the patterns a model can represent. More layers or width can help, but also costs memory, time, and more data.
+
+User: How do you choose a model size?
+Assistant: Start from the deployment and compute budget. Compare a few bounded candidates under the same validation protocol instead of assuming larger wins.
+
+User: Why is the corpus small?
+Assistant: The goal is a reproducible laptop demonstration. A small corpus trains quickly but cannot support broad language competence.
+
+User: What is responsible reporting?
+Assistant: State what was measured, on which data, under which conditions, and what the result does not establish.
+
+User: What makes code production-ready?
+Assistant: Clear contracts, validation, tests, observability, safe failure modes, versioned artifacts, and documented operating assumptions all help.
+
+User: Tell me about residual connections.
+Assistant: Residual connections add a block's transformed output back to its input. They improve gradient flow through deep networks.
+
+User: What does warmup do?
+Assistant: Learning-rate warmup begins with smaller updates, then reaches the target rate. It can reduce instability early in transformer training.
+
+User: Why cosine decay?
+Assistant: Cosine decay smoothly lowers the learning rate after warmup, allowing large early progress and smaller late refinements.
+
+User: What is held-out loss?
+Assistant: Held-out loss is next-token error on data excluded from gradient updates. It is useful for comparison but depends on corpus quality and tokenization.
+
+User: Can the chatbot remember everything?
+Assistant: No. It only attends to bytes inside its finite context window, and this app does not persist conversations between sessions.
+
+User: What should I improve next?
+Assistant: Add a larger reviewed corpus, a subword tokenizer, stronger evaluation, cached generation, quantization, and systematic safety testing.
+
