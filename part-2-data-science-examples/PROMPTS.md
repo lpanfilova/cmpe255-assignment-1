@@ -166,9 +166,22 @@ Record this Project 11 prompt in `part-2-data-science-examples/PROMPTS.md`.
 Do not modify Part 1. Do not commit or push.
 When finished, briefly summarize what was audited, what was implemented, how it was tested, and how to run it.
 
-## Projects 12-13
+## Project 12: Time Series Forecasting
 
-Add one section per project using this pattern:
+### Prompt
+
+Work in `part-2-data-science-examples/12_timeseries_forecasting`.
+Build a similar website for time series forecasting, similar to the other projects, including detailed CRISP-DM steps and admin and other dashboards.
+Use a suitable public/sample time-series dataset and common forecasting methods. Keep the project reasonably scoped and runnable locally.
+Add a concise README with setup/run instructions and key results. Test that the forecasting pipeline and dashboards work.
+Update `part-2-data-science-examples/README.md` to mark Project 12 complete and link to its directory. Preserve existing project entries.
+Record this Project 12 prompt in `part-2-data-science-examples/PROMPTS.md`.
+Do not modify Part 1. Do not commit or push.
+When finished, briefly summarize what was implemented, how it was tested, and how to run it.
+
+## Project 13: CRISP-DM NYC Taxi Audit Platform
+
+Add the remaining project using this pattern:
 
 ```markdown
 ## Project NN: Project Name

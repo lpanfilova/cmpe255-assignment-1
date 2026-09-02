@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chronos | Forecast Operations</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span>CH</span><div>CHRONOS<small>Forecast operations</small></div></div>
+    <nav aria-label="Dashboard views">
+      <button class="nav active" data-view="overview">◫ <span>Executive overview</span></button>
+      <button class="nav" data-view="lab">⌁ <span>Forecast lab</span></button>
+      <button class="nav" data-view="crisp">◇ <span>CRISP-DM playbook</span></button>
+      <button class="nav" data-view="admin">⚙ <span>Admin & governance</span></button>
+    </nav>
+    <div class="source"><strong>Source snapshot</strong><span>AirPassengers</span><span>144 monthly records</span><span>1949–1960</span></div>
+  </aside>
+  <main>
+    <header><div><p class="eyebrow">DEMAND INTELLIGENCE / MONTHLY</p><h1 id="view-title">Executive overview</h1></div><div class="status"><i></i> Pipeline healthy</div></header>
+
+    <section class="view active" id="overview">
+      <div class="hero"><div><p class="eyebrow">NEXT 12 MONTHS</p><h2>Demand continues its seasonal climb.</h2><p>The selected {{ results.champion }} model projects a summer peak while preserving the recurring winter trough. Use the interval as planning uncertainty, not a guarantee.</p></div><div class="hero-number"><span>Champion holdout MASE</span><strong>{{ results.evaluation[results.champion].mase }}</strong><small>Below 1 beats an in-sample seasonal-naïve scale</small></div></div>
+      <div class="kpis">
+        <article><span>Champion model</span><strong>{{ results.champion }}</strong><small>Lowest holdout MASE</small></article>
+        <article><span>Holdout MAPE</span><strong>{{ results.evaluation[results.champion].mape }}%</strong><small>24 unseen months</small></article>
+        <article><span>Next peak</span><strong id="peak-value">—</strong><small id="peak-date">12-month horizon</small></article>
+        <article><span>Data quality</span><strong>100%</strong><small>Complete monthly index</small></article>
+      </div>
+      <div class="grid wide-left"><article class="panel"><div class="panel-head"><div><p class="eyebrow">ACTUAL + FORECAST</p><h3>Passenger demand trajectory</h3></div><div class="legend"><span class="actual">Actual</span><span class="forecast">Forecast</span><span class="interval">95% interval</span></div></div><canvas id="overview-chart" height="320" aria-label="Historical demand and forecast chart"></canvas></article><article class="panel insight"><p class="eyebrow">PLANNING SIGNALS</p><h3>What needs attention</h3><ul><li><b>Capacity:</b> stage resources ahead of the projected mid-year peak.</li><li><b>Uncertainty:</b> interval width comes from holdout residual variation.</li><li><b>Monitoring:</b> review when MASE rises above 1.0 or bias becomes material.</li></ul><div class="callout">Forecasts extrapolate historical trend and seasonality; shocks and capacity constraints are absent.</div></article></div>
+    </section>
+
+    <section class="view" id="lab">
+      <div class="section-intro"><p class="eyebrow">MODEL EVALUATION</p><h2>Compare methods on the same untouched horizon.</h2><p>The last 24 months are held out chronologically. No random split, future-derived feature, or refit-on-test shortcut is used.</p></div>
+      <div class="grid equal"><article class="panel"><h3>Holdout performance</h3><div class="table-wrap"><table><thead><tr><th>Model</th><th>MAE</th><th>RMSE</th><th>MAPE</th><th>MASE</th><th>Bias</th></tr></thead><tbody>{% for name, metric in results.evaluation.items() %}<tr class="{% if name == results.champion %}winner{% endif %}"><td>{{ name }}{% if name == results.champion %}<em>CHAMPION</em>{% endif %}</td><td>{{ metric.mae }}</td><td>{{ metric.rmse }}</td><td>{{ metric.mape }}%</td><td>{{ metric.mase }}</td><td>{{ metric.bias }}</td></tr>{% endfor %}</tbody></table></div></article><article class="panel"><h3>Metric interpretation</h3><div class="metric-notes"><p><b>MAE</b> Typical absolute error in thousands of passengers.</p><p><b>RMSE</b> Penalizes large misses more heavily.</p><p><b>MAPE</b> Average percentage error; easy to read, scale-sensitive near zero.</p><p><b>MASE</b> Scale-free error relative to in-sample one-step naïve error.</p><p><b>Bias</b> Mean forecast minus actual; positive means overforecasting.</p></div></article></div>
+      <article class="panel"><div class="panel-head"><div><p class="eyebrow">BACKTEST</p><h3>Holdout predictions by model</h3></div><select id="model-select" aria-label="Choose forecast model">{% for name in results.evaluation %}<option>{{ name }}</option>{% endfor %}</select></div><canvas id="holdout-chart" height="300"></canvas></article>
+    </section>
+
+    <section class="view" id="crisp">
+      <div class="section-intro"><p class="eyebrow">END-TO-END METHOD</p><h2>CRISP-DM, adapted for temporal decisions.</h2><p>Each phase has an output, decision gate, and feedback path. Forecasting is iterative: deployment monitoring feeds the next business-understanding cycle.</p></div>
+      <div class="steps">
+        <article><b>01</b><div><h3>Business understanding</h3><p><strong>Question:</strong> What monthly capacity should planners prepare for over the next year?</p><p><strong>Success:</strong> holdout MASE below 1, low bias, explainable seasonal shape, and reproducible generation.</p><p><strong>Risks:</strong> structural breaks, external shocks, and confusing correlation with causation.</p></div><span>Decision brief</span></article>
+        <article><b>02</b><div><h3>Data understanding</h3><p>Profile 144 monthly observations from Jan 1949–Dec 1960. Verify the time grain, contiguous index, trend, increasing seasonal amplitude, peaks, and troughs.</p><p><strong>Gate:</strong> zero missing, duplicate, or non-positive values; monthly frequency confirmed.</p></div><span>Quality report</span></article>
+        <article><b>03</b><div><h3>Data preparation</h3><p>Sort chronologically, preserve the untouched final 24 months, and create deterministic calendar/trend features only from timestamps. Use multiplicative seasonality where amplitude scales with level.</p><p><strong>Leakage control:</strong> all estimators fit only on pre-holdout history.</p></div><span>Model-ready series</span></article>
+        <article><b>04</b><div><h3>Modeling</h3><p>Benchmark seasonal naïve, Holt-Winters additive trend with multiplicative seasonality, and Ridge regression on log demand with polynomial trend and calendar harmonics/dummies.</p><p><strong>Why three:</strong> baseline, classical statistical model, and regularized feature model provide useful diversity without excessive compute.</p></div><span>Candidate forecasts</span></article>
+        <article><b>05</b><div><h3>Evaluation</h3><p>Rank on holdout MASE, then inspect MAE, RMSE, MAPE, and bias. Sanity-check future non-negativity and seasonal shape. The champion is {{ results.champion }}.</p><p><strong>Limit:</strong> one terminal holdout is transparent but does not replace rolling-origin validation for high-stakes use.</p></div><span>Champion decision</span></article>
+        <article><b>06</b><div><h3>Deployment</h3><p>Write a versionable JSON evidence contract, expose read-only forecast and health endpoints, and render decision, model, methodology, and governance views from the same artifact.</p><p><strong>Monitor:</strong> refresh monthly; alert at MASE &gt; 1 or materially biased errors.</p></div><span>Operational dashboard</span></article>
+      </div>
+    </section>
+
+    <section class="view" id="admin">
+      <div class="section-intro"><p class="eyebrow">MODEL OPERATIONS</p><h2>Governance, freshness, and controls.</h2><p>A compact administration view for data scientists and operators maintaining the forecast.</p></div>
+      <div class="kpis"><article><span>Service state</span><strong class="green">Healthy</strong><small>/health responds</small></article><article><span>Artifact</span><strong>Current</strong><small>{{ results.metadata.generated_at[:10] }}</small></article><article><span>Drift state</span><strong>Baseline</strong><small>Monitoring starts after deployment</small></article><article><span>Refresh</span><strong>Manual</strong><small>Local demonstration</small></article></div>
+      <div class="grid equal"><article class="panel"><h3>Data contract</h3><dl><dt>Dataset</dt><dd>{{ results.metadata.dataset }}</dd><dt>Grain</dt><dd>One row per calendar month</dd><dt>Coverage</dt><dd>{{ results.quality.start }} → {{ results.quality.end }}</dd><dt>Completeness</dt><dd>144 / 144 expected months</dd><dt>Null / duplicate count</dt><dd>0 / 0</dd><dt>Source</dt><dd>{{ results.metadata.source }}</dd></dl></article><article class="panel"><h3>Operational policy</h3><div class="policy"><span>RETRAIN</span><p>After each complete monthly observation is approved.</p><span>ALERT</span><p>MASE above 1.0 or absolute bias above 10% of mean demand.</p><span>ROLLBACK</span><p>Keep the prior JSON artifact and seasonal-naïve fallback.</p><span>OWNERSHIP</span><p>Analyst validates inputs; model owner approves champion changes.</p></div></article></div>
+      <article class="panel"><h3>Readiness checklist</h3><div class="checklist"><label><input type="checkbox" checked disabled> Schema and monthly continuity validated</label><label><input type="checkbox" checked disabled> Chronological holdout isolated</label><label><input type="checkbox" checked disabled> Baseline and candidate models compared</label><label><input type="checkbox" checked disabled> Forecast bounds are non-negative</label><label><input type="checkbox" disabled> External drivers and scenario assumptions reviewed</label><label><input type="checkbox" disabled> Rolling-origin backtests approved for production</label></div></article>
+    </section>
+    <footer>Source: Box & Jenkins International Airline Passengers series · Educational local snapshot · Values are thousands of passengers</footer>
+  </main>
+  <script id="forecast-data" type="application/json">{{ results|tojson }}</script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
