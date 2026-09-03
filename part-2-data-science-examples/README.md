@@ -17,6 +17,6 @@ Part 2 reproduces 14 professor-provided data science examples with an AI coding 
 | [10 - CRISP-DM Masters Curriculum](10_crispdm_masters_curriculum/) | End-to-end CRISP-DM methodology and multi-method Titanic analysis | Complete |
 | [11 - Enterprise DS Audit](11_enterprise_ds_audit/) | Enterprise data science auditing | Complete |
 | [12 - Time Series Forecasting](12_timeseries_forecasting/) | Forecasting temporal data with CRISP-DM and operational dashboards | Complete |
-| 13 - CRISP-DM NYC Taxi Audit Platform | CRISP-DM audit platform for NYC taxi data | Not started |
+| [13 - CRISP-DM NYC Taxi Audit Platform](13_crispdm_nyc_taxi_audit_platform/) | Transparent CRISP-DM, XAI, inference, and MLOps audit platform for NYC taxi-shaped data | Complete |
 
 Meaningful prompts used for each reproduction will be recorded in [PROMPTS.md](PROMPTS.md).

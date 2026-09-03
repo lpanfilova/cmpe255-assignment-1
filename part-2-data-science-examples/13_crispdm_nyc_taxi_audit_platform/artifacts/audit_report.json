@@ -1,0 +1,1549 @@
+{
+  "metadata": {
+    "project": "NYC Taxi Audit Platform",
+    "dataset": "deterministic synthetic sample shaped like NYC TLC trips",
+    "source_note": "Offline teaching data; replace generate_sample with a reviewed TLC extract for real decisions.",
+    "generated_at": "2026-09-02T00:20:45.619754+00:00",
+    "seed": 42,
+    "train_rows": 1440,
+    "test_rows": 360,
+    "split": "chronological 80/20",
+    "target": "duration_minutes"
+  },
+  "quality": {
+    "rows": 1800,
+    "columns": 10,
+    "missing_columns": [],
+    "duplicate_trip_ids": 0,
+    "missing_values": 0,
+    "invalid_domain_rows": 0,
+    "grain": "one row per synthetic taxi trip",
+    "status": "pass"
+  },
+  "evaluation": {
+    "Ridge": {
+      "mae": 3.67,
+      "rmse": 4.973,
+      "r2": 0.9043
+    },
+    "Random forest": {
+      "mae": 2.871,
+      "rmse": 3.955,
+      "r2": 0.9394
+    },
+    "Gradient boosting": {
+      "mae": 3.027,
+      "rmse": 4.52,
+      "r2": 0.9209
+    }
+  },
+  "champion": "Random forest",
+  "ablations": [
+    {
+      "variant": "all features",
+      "features": [
+        "distance_miles",
+        "passenger_count",
+        "pickup_hour",
+        "day_of_week",
+        "temperature_f",
+        "rain",
+        "pickup_zone"
+      ],
+      "mae": 3.027,
+      "rmse": 4.52,
+      "r2": 0.9209
+    },
+    {
+      "variant": "without weather",
+      "features": [
+        "distance_miles",
+        "passenger_count",
+        "pickup_hour",
+        "day_of_week",
+        "pickup_zone"
+      ],
+      "mae": 3.06,
+      "rmse": 4.553,
+      "r2": 0.9197
+    },
+    {
+      "variant": "without zone",
+      "features": [
+        "distance_miles",
+        "passenger_count",
+        "pickup_hour",
+        "day_of_week",
+        "temperature_f",
+        "rain"
+      ],
+      "mae": 3.018,
+      "rmse": 4.471,
+      "r2": 0.9226
+    },
+    {
+      "variant": "distance only",
+      "features": [
+        "distance_miles"
+      ],
+      "mae": 3.58,
+      "rmse": 5.245,
+      "r2": 0.8935
+    }
+  ],
+  "tuning": [
+    {
+      "max_depth": 1,
+      "mae": 3.655,
+      "rmse": 5.575,
+      "r2": 0.8797
+    },
+    {
+      "max_depth": 2,
+      "mae": 3.212,
+      "rmse": 4.843,
+      "r2": 0.9092
+    },
+    {
+      "max_depth": 3,
+      "mae": 2.792,
+      "rmse": 4.22,
+      "r2": 0.9311
+    }
+  ],
+  "importance": [
+    {
+      "feature": "distance_miles",
+      "importance": 14.3286
+    },
+    {
+      "feature": "pickup_hour",
+      "importance": 1.0634
+    },
+    {
+      "feature": "rain",
+      "importance": 0.0286
+    },
+    {
+      "feature": "pickup_zone",
+      "importance": 0.0272
+    },
+    {
+      "feature": "passenger_count",
+      "importance": -0.0024
+    },
+    {
+      "feature": "day_of_week",
+      "importance": -0.0086
+    },
+    {
+      "feature": "temperature_f",
+      "importance": -0.0551
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": 0,
+      "trips": 707,
+      "distance": 3.71,
+      "duration": 18.43,
+      "hour": 17.7
+    },
+    {
+      "cluster": 1,
+      "trips": 445,
+      "distance": 11.32,
+      "duration": 49.18,
+      "hour": 11.2
+    },
+    {
+      "cluster": 2,
+      "trips": 648,
+      "distance": 3.61,
+      "duration": 18.04,
+      "hour": 5.1
+    }
+  ],
+  "cluster_silhouette": 0.409,
+  "scatter": [
+    {
+      "x": 11.971,
+      "y": 44.98,
+      "cluster": 1
+    },
+    {
+      "x": 9.898,
+      "y": 53.52,
+      "cluster": 1
+    },
+    {
+      "x": 10.142,
+      "y": 53.71,
+      "cluster": 1
+    },
+    {
+      "x": 5.967,
+      "y": 26.74,
+      "cluster": 2
+    },
+    {
+      "x": 4.125,
+      "y": 16.34,
+      "cluster": 2
+    },
+    {
+      "x": 8.775,
+      "y": 32.31,
+      "cluster": 0
+    },
+    {
+      "x": 10.476,
+      "y": 40.27,
+      "cluster": 1
+    },
+    {
+      "x": 2.108,
+      "y": 16.06,
+      "cluster": 2
+    },
+    {
+      "x": 8.72,
+      "y": 36.02,
+      "cluster": 0
+    },
+    {
+      "x": 4.344,
+      "y": 25.96,
+      "cluster": 2
+    },
+    {
+      "x": 1.314,
+      "y": 8.47,
+      "cluster": 2
+    },
+    {
+      "x": 5.379,
+      "y": 23.23,
+      "cluster": 2
+    },
+    {
+      "x": 3.143,
+      "y": 18.02,
+      "cluster": 2
+    },
+    {
+      "x": 5.776,
+      "y": 31.79,
+      "cluster": 0
+    },
+    {
+      "x": 5.641,
+      "y": 31.04,
+      "cluster": 0
+    },
+    {
+      "x": 1.865,
+      "y": 10.47,
+      "cluster": 0
+    },
+    {
+      "x": 3.196,
+      "y": 16.46,
+      "cluster": 2
+    },
+    {
+      "x": 9.497,
+      "y": 59.55,
+      "cluster": 1
+    },
+    {
+      "x": 11.15,
+      "y": 57.56,
+      "cluster": 1
+    },
+    {
+      "x": 0.2,
+      "y": 5.19,
+      "cluster": 2
+    },
+    {
+      "x": 9.893,
+      "y": 31.85,
+      "cluster": 1
+    },
+    {
+      "x": 9.204,
+      "y": 33.66,
+      "cluster": 1
+    },
+    {
+      "x": 6.566,
+      "y": 33.24,
+      "cluster": 0
+    },
+    {
+      "x": 4.871,
+      "y": 31.92,
+      "cluster": 0
+    },
+    {
+      "x": 4.471,
+      "y": 24.98,
+      "cluster": 0
+    },
+    {
+      "x": 4.55,
+      "y": 17.67,
+      "cluster": 2
+    },
+    {
+      "x": 8.026,
+      "y": 36.03,
+      "cluster": 2
+    },
+    {
+      "x": 8.869,
+      "y": 48.75,
+      "cluster": 1
+    },
+    {
+      "x": 4.161,
+      "y": 19.2,
+      "cluster": 2
+    },
+    {
+      "x": 9.106,
+      "y": 35.25,
+      "cluster": 1
+    },
+    {
+      "x": 4.275,
+      "y": 27.9,
+      "cluster": 2
+    },
+    {
+      "x": 8.037,
+      "y": 46.7,
+      "cluster": 1
+    },
+    {
+      "x": 4.397,
+      "y": 19.43,
+      "cluster": 2
+    },
+    {
+      "x": 2.764,
+      "y": 17.52,
+      "cluster": 0
+    },
+    {
+      "x": 5.473,
+      "y": 27.89,
+      "cluster": 2
+    },
+    {
+      "x": 3.114,
+      "y": 15.02,
+      "cluster": 0
+    },
+    {
+      "x": 2.061,
+      "y": 11.91,
+      "cluster": 2
+    },
+    {
+      "x": 2.594,
+      "y": 12.19,
+      "cluster": 2
+    },
+    {
+      "x": 5.344,
+      "y": 21.3,
+      "cluster": 2
+    },
+    {
+      "x": 9.402,
+      "y": 57.45,
+      "cluster": 1
+    },
+    {
+      "x": 6.082,
+      "y": 27.36,
+      "cluster": 0
+    },
+    {
+      "x": 1.449,
+      "y": 11.69,
+      "cluster": 2
+    },
+    {
+      "x": 1.723,
+      "y": 17.7,
+      "cluster": 0
+    },
+    {
+      "x": 1.426,
+      "y": 8.74,
+      "cluster": 0
+    },
+    {
+      "x": 21.906,
+      "y": 116.04,
+      "cluster": 1
+    },
+    {
+      "x": 7.687,
+      "y": 32.76,
+      "cluster": 2
+    },
+    {
+      "x": 3.227,
+      "y": 12.81,
+      "cluster": 0
+    },
+    {
+      "x": 4.803,
+      "y": 18.32,
+      "cluster": 2
+    },
+    {
+      "x": 1.285,
+      "y": 7.73,
+      "cluster": 0
+    },
+    {
+      "x": 1.807,
+      "y": 8.28,
+      "cluster": 2
+    },
+    {
+      "x": 1.086,
+      "y": 9.24,
+      "cluster": 0
+    },
+    {
+      "x": 2.561,
+      "y": 11.84,
+      "cluster": 2
+    },
+    {
+      "x": 2.488,
+      "y": 13.5,
+      "cluster": 2
+    },
+    {
+      "x": 3.504,
+      "y": 20.54,
+      "cluster": 2
+    },
+    {
+      "x": 18.482,
+      "y": 66.97,
+      "cluster": 1
+    },
+    {
+      "x": 2.242,
+      "y": 17.78,
+      "cluster": 2
+    },
+    {
+      "x": 4.653,
+      "y": 31.66,
+      "cluster": 0
+    },
+    {
+      "x": 7.81,
+      "y": 42.84,
+      "cluster": 1
+    },
+    {
+      "x": 4.114,
+      "y": 17.49,
+      "cluster": 0
+    },
+    {
+      "x": 2.298,
+      "y": 13.15,
+      "cluster": 0
+    },
+    {
+      "x": 14.847,
+      "y": 63.38,
+      "cluster": 1
+    },
+    {
+      "x": 6.49,
+      "y": 24.56,
+      "cluster": 2
+    },
+    {
+      "x": 10.602,
+      "y": 43.5,
+      "cluster": 1
+    },
+    {
+      "x": 5.295,
+      "y": 21.89,
+      "cluster": 0
+    },
+    {
+      "x": 4.776,
+      "y": 21.27,
+      "cluster": 0
+    },
+    {
+      "x": 0.964,
+      "y": 8.77,
+      "cluster": 0
+    },
+    {
+      "x": 12.541,
+      "y": 48.3,
+      "cluster": 1
+    },
+    {
+      "x": 3.795,
+      "y": 15.56,
+      "cluster": 2
+    },
+    {
+      "x": 4.484,
+      "y": 26.95,
+      "cluster": 0
+    },
+    {
+      "x": 1.992,
+      "y": 11.11,
+      "cluster": 0
+    },
+    {
+      "x": 0.2,
+      "y": 4.49,
+      "cluster": 0
+    },
+    {
+      "x": 2.69,
+      "y": 11.13,
+      "cluster": 0
+    },
+    {
+      "x": 2.831,
+      "y": 15.72,
+      "cluster": 2
+    },
+    {
+      "x": 8.524,
+      "y": 47.57,
+      "cluster": 1
+    },
+    {
+      "x": 6.482,
+      "y": 28.37,
+      "cluster": 0
+    },
+    {
+      "x": 8.397,
+      "y": 33.19,
+      "cluster": 0
+    },
+    {
+      "x": 2.478,
+      "y": 19.63,
+      "cluster": 2
+    },
+    {
+      "x": 13.275,
+      "y": 57.19,
+      "cluster": 1
+    },
+    {
+      "x": 2.117,
+      "y": 11.27,
+      "cluster": 2
+    },
+    {
+      "x": 5.961,
+      "y": 32.08,
+      "cluster": 2
+    },
+    {
+      "x": 14.629,
+      "y": 74.72,
+      "cluster": 1
+    },
+    {
+      "x": 2.763,
+      "y": 11.17,
+      "cluster": 0
+    },
+    {
+      "x": 3.3,
+      "y": 14.67,
+      "cluster": 2
+    },
+    {
+      "x": 4.071,
+      "y": 20.18,
+      "cluster": 0
+    },
+    {
+      "x": 11.493,
+      "y": 48.17,
+      "cluster": 1
+    },
+    {
+      "x": 7.767,
+      "y": 32.37,
+      "cluster": 0
+    },
+    {
+      "x": 3.544,
+      "y": 16.87,
+      "cluster": 0
+    },
+    {
+      "x": 18.75,
+      "y": 72.82,
+      "cluster": 1
+    },
+    {
+      "x": 1.333,
+      "y": 6.13,
+      "cluster": 2
+    },
+    {
+      "x": 6.717,
+      "y": 29.14,
+      "cluster": 2
+    },
+    {
+      "x": 5.769,
+      "y": 24.3,
+      "cluster": 2
+    },
+    {
+      "x": 6.864,
+      "y": 27.02,
+      "cluster": 2
+    },
+    {
+      "x": 1.312,
+      "y": 9.34,
+      "cluster": 0
+    },
+    {
+      "x": 1.833,
+      "y": 15.06,
+      "cluster": 0
+    },
+    {
+      "x": 0.916,
+      "y": 7.58,
+      "cluster": 0
+    },
+    {
+      "x": 4.714,
+      "y": 20.03,
+      "cluster": 0
+    },
+    {
+      "x": 7.692,
+      "y": 29.52,
+      "cluster": 0
+    },
+    {
+      "x": 10.111,
+      "y": 52.3,
+      "cluster": 1
+    },
+    {
+      "x": 0.89,
+      "y": 8.13,
+      "cluster": 2
+    },
+    {
+      "x": 2.914,
+      "y": 17.79,
+      "cluster": 2
+    },
+    {
+      "x": 10.582,
+      "y": 40.48,
+      "cluster": 1
+    },
+    {
+      "x": 13.378,
+      "y": 54.71,
+      "cluster": 1
+    },
+    {
+      "x": 8.902,
+      "y": 34.89,
+      "cluster": 1
+    },
+    {
+      "x": 8.39,
+      "y": 34.12,
+      "cluster": 0
+    },
+    {
+      "x": 8.239,
+      "y": 34.11,
+      "cluster": 2
+    },
+    {
+      "x": 11.497,
+      "y": 41.48,
+      "cluster": 1
+    },
+    {
+      "x": 3.686,
+      "y": 16.92,
+      "cluster": 2
+    },
+    {
+      "x": 4.08,
+      "y": 26.35,
+      "cluster": 0
+    },
+    {
+      "x": 2.285,
+      "y": 17.13,
+      "cluster": 0
+    },
+    {
+      "x": 10.263,
+      "y": 35.94,
+      "cluster": 1
+    },
+    {
+      "x": 1.612,
+      "y": 12.46,
+      "cluster": 0
+    },
+    {
+      "x": 2.029,
+      "y": 15.73,
+      "cluster": 0
+    },
+    {
+      "x": 6.864,
+      "y": 29.84,
+      "cluster": 2
+    },
+    {
+      "x": 1.007,
+      "y": 6.43,
+      "cluster": 0
+    },
+    {
+      "x": 4.769,
+      "y": 29.83,
+      "cluster": 0
+    },
+    {
+      "x": 3.092,
+      "y": 18.6,
+      "cluster": 0
+    },
+    {
+      "x": 6.234,
+      "y": 25.7,
+      "cluster": 2
+    },
+    {
+      "x": 6.057,
+      "y": 25.94,
+      "cluster": 2
+    },
+    {
+      "x": 4.477,
+      "y": 18.41,
+      "cluster": 2
+    },
+    {
+      "x": 5.593,
+      "y": 28.59,
+      "cluster": 0
+    },
+    {
+      "x": 3.51,
+      "y": 12.22,
+      "cluster": 0
+    },
+    {
+      "x": 5.253,
+      "y": 25.84,
+      "cluster": 0
+    },
+    {
+      "x": 3.365,
+      "y": 11.71,
+      "cluster": 2
+    },
+    {
+      "x": 10.225,
+      "y": 41.39,
+      "cluster": 1
+    },
+    {
+      "x": 6.696,
+      "y": 32.73,
+      "cluster": 0
+    },
+    {
+      "x": 2.891,
+      "y": 19.71,
+      "cluster": 0
+    },
+    {
+      "x": 1.022,
+      "y": 5.9,
+      "cluster": 0
+    },
+    {
+      "x": 5.566,
+      "y": 21.4,
+      "cluster": 0
+    },
+    {
+      "x": 1.334,
+      "y": 9.84,
+      "cluster": 2
+    },
+    {
+      "x": 8.518,
+      "y": 33.91,
+      "cluster": 1
+    },
+    {
+      "x": 1.368,
+      "y": 12.97,
+      "cluster": 2
+    },
+    {
+      "x": 13.651,
+      "y": 52.23,
+      "cluster": 1
+    },
+    {
+      "x": 3.038,
+      "y": 20.38,
+      "cluster": 2
+    },
+    {
+      "x": 4.08,
+      "y": 27.24,
+      "cluster": 0
+    },
+    {
+      "x": 1.779,
+      "y": 10.94,
+      "cluster": 0
+    },
+    {
+      "x": 5.391,
+      "y": 30.95,
+      "cluster": 2
+    },
+    {
+      "x": 5.375,
+      "y": 23.92,
+      "cluster": 0
+    },
+    {
+      "x": 3.249,
+      "y": 16.43,
+      "cluster": 2
+    },
+    {
+      "x": 9.579,
+      "y": 37.08,
+      "cluster": 1
+    },
+    {
+      "x": 4.446,
+      "y": 20.14,
+      "cluster": 2
+    },
+    {
+      "x": 2.002,
+      "y": 11.14,
+      "cluster": 0
+    },
+    {
+      "x": 7.029,
+      "y": 37.45,
+      "cluster": 0
+    },
+    {
+      "x": 5.867,
+      "y": 33.22,
+      "cluster": 2
+    },
+    {
+      "x": 3.604,
+      "y": 25.78,
+      "cluster": 0
+    },
+    {
+      "x": 3.662,
+      "y": 16.0,
+      "cluster": 0
+    },
+    {
+      "x": 5.523,
+      "y": 18.73,
+      "cluster": 2
+    },
+    {
+      "x": 12.516,
+      "y": 48.1,
+      "cluster": 1
+    },
+    {
+      "x": 7.298,
+      "y": 31.29,
+      "cluster": 2
+    },
+    {
+      "x": 2.729,
+      "y": 16.28,
+      "cluster": 2
+    },
+    {
+      "x": 1.904,
+      "y": 6.91,
+      "cluster": 2
+    },
+    {
+      "x": 9.703,
+      "y": 43.01,
+      "cluster": 1
+    },
+    {
+      "x": 8.59,
+      "y": 49.4,
+      "cluster": 1
+    },
+    {
+      "x": 1.473,
+      "y": 11.96,
+      "cluster": 2
+    },
+    {
+      "x": 9.238,
+      "y": 41.09,
+      "cluster": 1
+    },
+    {
+      "x": 0.481,
+      "y": 6.35,
+      "cluster": 2
+    },
+    {
+      "x": 3.488,
+      "y": 15.44,
+      "cluster": 2
+    },
+    {
+      "x": 1.718,
+      "y": 10.4,
+      "cluster": 2
+    },
+    {
+      "x": 2.843,
+      "y": 14.74,
+      "cluster": 0
+    },
+    {
+      "x": 10.444,
+      "y": 39.27,
+      "cluster": 1
+    },
+    {
+      "x": 11.927,
+      "y": 64.74,
+      "cluster": 1
+    },
+    {
+      "x": 5.258,
+      "y": 22.56,
+      "cluster": 0
+    },
+    {
+      "x": 5.488,
+      "y": 31.52,
+      "cluster": 0
+    },
+    {
+      "x": 8.171,
+      "y": 36.02,
+      "cluster": 1
+    },
+    {
+      "x": 2.563,
+      "y": 12.81,
+      "cluster": 2
+    },
+    {
+      "x": 2.595,
+      "y": 13.46,
+      "cluster": 0
+    },
+    {
+      "x": 4.301,
+      "y": 18.8,
+      "cluster": 0
+    },
+    {
+      "x": 0.686,
+      "y": 3.8,
+      "cluster": 0
+    },
+    {
+      "x": 3.836,
+      "y": 20.45,
+      "cluster": 0
+    },
+    {
+      "x": 13.364,
+      "y": 49.31,
+      "cluster": 1
+    },
+    {
+      "x": 2.29,
+      "y": 11.82,
+      "cluster": 0
+    },
+    {
+      "x": 1.241,
+      "y": 9.4,
+      "cluster": 0
+    },
+    {
+      "x": 1.354,
+      "y": 12.7,
+      "cluster": 2
+    },
+    {
+      "x": 7.131,
+      "y": 29.17,
+      "cluster": 0
+    },
+    {
+      "x": 4.945,
+      "y": 27.93,
+      "cluster": 0
+    },
+    {
+      "x": 8.469,
+      "y": 31.21,
+      "cluster": 0
+    },
+    {
+      "x": 13.934,
+      "y": 54.6,
+      "cluster": 1
+    },
+    {
+      "x": 1.411,
+      "y": 14.54,
+      "cluster": 0
+    },
+    {
+      "x": 10.74,
+      "y": 40.97,
+      "cluster": 1
+    },
+    {
+      "x": 3.128,
+      "y": 16.07,
+      "cluster": 2
+    },
+    {
+      "x": 10.411,
+      "y": 62.16,
+      "cluster": 1
+    },
+    {
+      "x": 6.724,
+      "y": 27.04,
+      "cluster": 2
+    },
+    {
+      "x": 3.166,
+      "y": 19.46,
+      "cluster": 2
+    },
+    {
+      "x": 11.343,
+      "y": 46.43,
+      "cluster": 1
+    },
+    {
+      "x": 3.728,
+      "y": 20.51,
+      "cluster": 0
+    },
+    {
+      "x": 5.386,
+      "y": 26.33,
+      "cluster": 2
+    },
+    {
+      "x": 1.252,
+      "y": 5.99,
+      "cluster": 0
+    },
+    {
+      "x": 10.805,
+      "y": 43.01,
+      "cluster": 1
+    },
+    {
+      "x": 3.256,
+      "y": 17.1,
+      "cluster": 0
+    },
+    {
+      "x": 12.603,
+      "y": 68.89,
+      "cluster": 1
+    },
+    {
+      "x": 13.323,
+      "y": 52.53,
+      "cluster": 1
+    },
+    {
+      "x": 3.945,
+      "y": 19.38,
+      "cluster": 2
+    },
+    {
+      "x": 0.819,
+      "y": 9.3,
+      "cluster": 0
+    },
+    {
+      "x": 0.954,
+      "y": 8.1,
+      "cluster": 2
+    },
+    {
+      "x": 8.841,
+      "y": 31.16,
+      "cluster": 2
+    },
+    {
+      "x": 4.614,
+      "y": 30.22,
+      "cluster": 0
+    },
+    {
+      "x": 9.466,
+      "y": 52.53,
+      "cluster": 1
+    },
+    {
+      "x": 3.804,
+      "y": 21.09,
+      "cluster": 2
+    },
+    {
+      "x": 2.275,
+      "y": 14.23,
+      "cluster": 2
+    },
+    {
+      "x": 3.921,
+      "y": 20.11,
+      "cluster": 2
+    },
+    {
+      "x": 2.069,
+      "y": 15.3,
+      "cluster": 0
+    },
+    {
+      "x": 4.197,
+      "y": 18.44,
+      "cluster": 2
+    },
+    {
+      "x": 2.972,
+      "y": 22.88,
+      "cluster": 0
+    },
+    {
+      "x": 5.625,
+      "y": 30.36,
+      "cluster": 0
+    },
+    {
+      "x": 9.501,
+      "y": 36.99,
+      "cluster": 1
+    },
+    {
+      "x": 6.476,
+      "y": 26.25,
+      "cluster": 2
+    },
+    {
+      "x": 5.676,
+      "y": 25.09,
+      "cluster": 0
+    },
+    {
+      "x": 7.605,
+      "y": 36.38,
+      "cluster": 1
+    },
+    {
+      "x": 10.803,
+      "y": 44.94,
+      "cluster": 1
+    },
+    {
+      "x": 1.516,
+      "y": 11.99,
+      "cluster": 2
+    },
+    {
+      "x": 1.935,
+      "y": 13.41,
+      "cluster": 0
+    },
+    {
+      "x": 5.33,
+      "y": 29.98,
+      "cluster": 2
+    },
+    {
+      "x": 2.371,
+      "y": 11.18,
+      "cluster": 0
+    },
+    {
+      "x": 6.3,
+      "y": 23.78,
+      "cluster": 2
+    },
+    {
+      "x": 5.017,
+      "y": 26.54,
+      "cluster": 2
+    },
+    {
+      "x": 9.175,
+      "y": 50.21,
+      "cluster": 1
+    },
+    {
+      "x": 3.409,
+      "y": 11.65,
+      "cluster": 2
+    },
+    {
+      "x": 11.074,
+      "y": 40.48,
+      "cluster": 1
+    },
+    {
+      "x": 2.661,
+      "y": 15.26,
+      "cluster": 0
+    },
+    {
+      "x": 0.758,
+      "y": 4.52,
+      "cluster": 0
+    },
+    {
+      "x": 4.315,
+      "y": 16.48,
+      "cluster": 0
+    },
+    {
+      "x": 2.585,
+      "y": 15.67,
+      "cluster": 2
+    },
+    {
+      "x": 2.748,
+      "y": 14.87,
+      "cluster": 0
+    },
+    {
+      "x": 3.553,
+      "y": 19.22,
+      "cluster": 0
+    },
+    {
+      "x": 3.218,
+      "y": 14.75,
+      "cluster": 0
+    },
+    {
+      "x": 14.111,
+      "y": 54.59,
+      "cluster": 1
+    },
+    {
+      "x": 8.909,
+      "y": 48.35,
+      "cluster": 1
+    },
+    {
+      "x": 2.737,
+      "y": 13.94,
+      "cluster": 2
+    },
+    {
+      "x": 10.914,
+      "y": 42.05,
+      "cluster": 1
+    },
+    {
+      "x": 8.954,
+      "y": 39.2,
+      "cluster": 1
+    },
+    {
+      "x": 9.344,
+      "y": 56.42,
+      "cluster": 1
+    },
+    {
+      "x": 2.48,
+      "y": 13.68,
+      "cluster": 0
+    },
+    {
+      "x": 2.79,
+      "y": 13.64,
+      "cluster": 2
+    },
+    {
+      "x": 2.581,
+      "y": 14.32,
+      "cluster": 0
+    },
+    {
+      "x": 9.522,
+      "y": 55.62,
+      "cluster": 1
+    },
+    {
+      "x": 7.818,
+      "y": 46.23,
+      "cluster": 1
+    },
+    {
+      "x": 0.545,
+      "y": 10.15,
+      "cluster": 2
+    },
+    {
+      "x": 3.72,
+      "y": 22.92,
+      "cluster": 2
+    },
+    {
+      "x": 9.094,
+      "y": 34.34,
+      "cluster": 0
+    },
+    {
+      "x": 7.277,
+      "y": 30.6,
+      "cluster": 0
+    },
+    {
+      "x": 0.922,
+      "y": 11.69,
+      "cluster": 0
+    }
+  ],
+  "eda": {
+    "mean_duration": 25.89,
+    "median_duration": 21.25,
+    "p95_duration": 57.06,
+    "mean_distance": 5.56,
+    "hourly": [
+      {
+        "hour": 0,
+        "duration": 21.04
+      },
+      {
+        "hour": 1,
+        "duration": 24.1
+      },
+      {
+        "hour": 2,
+        "duration": 24.29
+      },
+      {
+        "hour": 3,
+        "duration": 22.96
+      },
+      {
+        "hour": 4,
+        "duration": 24.64
+      },
+      {
+        "hour": 5,
+        "duration": 22.38
+      },
+      {
+        "hour": 6,
+        "duration": 24.52
+      },
+      {
+        "hour": 7,
+        "duration": 31.7
+      },
+      {
+        "hour": 8,
+        "duration": 32.46
+      },
+      {
+        "hour": 9,
+        "duration": 33.51
+      },
+      {
+        "hour": 10,
+        "duration": 28.0
+      },
+      {
+        "hour": 11,
+        "duration": 26.39
+      },
+      {
+        "hour": 12,
+        "duration": 22.68
+      },
+      {
+        "hour": 13,
+        "duration": 23.03
+      },
+      {
+        "hour": 14,
+        "duration": 24.62
+      },
+      {
+        "hour": 15,
+        "duration": 27.42
+      },
+      {
+        "hour": 16,
+        "duration": 34.2
+      },
+      {
+        "hour": 17,
+        "duration": 29.06
+      },
+      {
+        "hour": 18,
+        "duration": 35.37
+      },
+      {
+        "hour": 19,
+        "duration": 22.66
+      },
+      {
+        "hour": 20,
+        "duration": 22.39
+      },
+      {
+        "hour": 21,
+        "duration": 22.72
+      },
+      {
+        "hour": 22,
+        "duration": 22.53
+      },
+      {
+        "hour": 23,
+        "duration": 20.43
+      }
+    ]
+  },
+  "residuals": {
+    "mean": -0.008,
+    "p95_abs": 7.722
+  },
+  "mlops": {
+    "model_version": "taxi-duration-1.0.0",
+    "model_sha256": "1af7287e9bb6059c",
+    "status": "healthy",
+    "distance_drift_standardized": 0.027,
+    "retrain_policy": "review when standardized drift > 0.5 or MAE > 4 minutes",
+    "latency_slo_ms": 500,
+    "registry_stage": "local-candidate"
+  },
+  "audit": {
+    "overall": "ready for educational demonstration",
+    "score": 92,
+    "checks": [
+      {
+        "name": "Data contract",
+        "status": "pass",
+        "evidence": "unique IDs, no nulls, valid domains"
+      },
+      {
+        "name": "Leakage control",
+        "status": "pass",
+        "evidence": "chronological split; preprocessing fitted within pipelines"
+      },
+      {
+        "name": "Baseline comparison",
+        "status": "pass",
+        "evidence": "three model families compared on the same holdout"
+      },
+      {
+        "name": "Explainability",
+        "status": "pass",
+        "evidence": "holdout permutation importance plus local what-if deltas"
+      },
+      {
+        "name": "Reproducibility",
+        "status": "pass",
+        "evidence": "fixed seeds, versioned artifact, deterministic generator"
+      },
+      {
+        "name": "External validity",
+        "status": "caveat",
+        "evidence": "synthetic sample is not evidence about actual TLC operations"
+      }
+    ]
+  },
+  "crispdm": [
+    {
+      "step": "1. Business understanding",
+      "detail": "Estimate trip duration for rider/dispatcher planning; prioritize MAE, latency, and transparent limitations."
+    },
+    {
+      "step": "2. Data understanding",
+      "detail": "Profile grain, domains, missingness, duration/distance distributions, hourly congestion, and zone mix."
+    },
+    {
+      "step": "3. Data preparation",
+      "detail": "Validate contracts, retain chronology, standardize numeric fields, and one-hot encode zone inside each model pipeline."
+    },
+    {
+      "step": "4. Modeling",
+      "detail": "Compare regularized linear, bagged-tree, and boosted-tree regressors; inspect depth tuning and feature-group ablations."
+    },
+    {
+      "step": "5. Evaluation",
+      "detail": "Select by holdout MAE, corroborate with RMSE/R\u00b2, residual tails, stability, XAI, and audit gates."
+    },
+    {
+      "step": "6. Deployment",
+      "detail": "Serve a validated REST request, persist a hashed model artifact, expose health/drift metadata, and provide a load-test script."
+    }
+  ]
+}

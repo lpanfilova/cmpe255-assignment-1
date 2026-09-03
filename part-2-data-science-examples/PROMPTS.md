@@ -181,12 +181,17 @@ When finished, briefly summarize what was implemented, how it was tested, and ho
 
 ## Project 13: CRISP-DM NYC Taxi Audit Platform
 
-Add the remaining project using this pattern:
-
-```markdown
-## Project NN: Project Name
-
 ### Prompt
 
-<!-- Insert the meaningful reproduction prompt here. -->
-```
+Work in `part-2-data-science-examples/13_crispdm_nyc_taxi_audit_platform`.
+Implement a new project following CRISP-DM methodology and engaging the appropriate data science skills. Use a dataset like the NYC taxi dataset.
+This should provide strong transparency in the website for data science auditors and code auditors, showing what happened on both the data science and code sides, with clear illustrations of important code snippets throughout the project.
+Include explainable AI and EDA dashboards in the website admin area. The CRISP-DM report should explain each step properly. The data analysis should include clustering visualization and the important stages of the data workflow.
+The modeling should compare multiple techniques and include useful hyperparameter/ablation analysis. Include an attractive inference interface, REST inference API, load-test demonstration, and representative MLOps functionality.
+Include a data science audit step to check that the process is principled and properly implemented.
+Keep this as a representative, reasonably scoped version that can run locally without excessive compute or training time. Do not over-engineer features merely to simulate enterprise scale.
+Add a concise README with setup/run instructions and key results. Test the important data-science pipeline, API, and website functionality.
+Update `part-2-data-science-examples/README.md` to mark Project 13 complete and link to its directory. Preserve all existing project entries.
+Record this Project 13 prompt in `part-2-data-science-examples/PROMPTS.md`.
+Do not modify Projects 00–12 or Part 1. Do not commit or push.
+When finished, briefly summarize what was implemented, what was tested, and how to run it.

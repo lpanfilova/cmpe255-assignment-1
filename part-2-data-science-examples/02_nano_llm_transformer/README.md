@@ -28,7 +28,7 @@ This is lightweight hill climbing, not an exhaustive hyperparameter claim: candi
 
 ## CRISP-DM and engineering design
 
-1. **Business understanding:** demonstrate how a modern causal LM is trained, evaluated, persisted, and served within a normal laptop budget. Success is a declining held-out next-byte loss plus verified generation—not general intelligence.
+1. **Business understanding:** demonstrate how a modern causal LM is trained, evaluated, persisted, and served within a normal laptop budget. Success is a declining held-out next-token loss plus verified generation—not general intelligence.
 2. **Data understanding:** use the included repository-owned educational dialogue corpus, with explicit source, token counts, split, and limitations in the dashboard.
 3. **Data preparation:** normalize text to ASCII, fit a compact word/punctuation vocabulary, split complete dialogues deterministically at 85/15, and sample fixed context windows. The fitted vocabulary is saved in the checkpoint, cannot emit malformed UTF-8, and needs no tokenizer download.
 4. **Modeling:** train a pre-norm decoder with causal SDPA, RoPE, RMSNorm, SwiGLU, residual connections, weight tying, AdamW, warmup/cosine scheduling, and gradient clipping. CUDA uses automatic mixed precision.
