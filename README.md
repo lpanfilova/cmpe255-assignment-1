@@ -13,3 +13,7 @@ See [part-1-whats-cooking/README.md](part-1-whats-cooking/README.md) for details
 A reproduction of 14 data science experiments provided by the professor.
 
 See [part-2-data-science-examples/README.md](part-2-data-science-examples/README.md) for details.
+
+## YouTube Walkthrough:
+
+https://youtu.be/KSeYDWiUzIw
